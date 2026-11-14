@@ -1,0 +1,26 @@
+[
+  {
+    "config": "Claude judge (claude-opus-5-5, effort=low)",
+    "pairs": 90,
+    "median_ms": 1875.5,
+    "en": {
+      "precision": 0.636,
+      "recall": 1.0,
+      "accuracy": 0.917,
+      "positives": 7
+    },
+    "all": {
+      "precision": 0.778,
+      "recall": 1.0,
+      "accuracy": 0.956,
+      "positives": 14
+    },
+    "ar": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "accuracy": 1.0,
+      "positives": 7
+    },
+    "cost_usd": 0.293
+  }
+]

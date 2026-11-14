@@ -1,0 +1,77 @@
+[
+  {
+    "config": "laya Router, zero-shot",
+    "median_ms": 40.6,
+    "ar": {
+      "intent_acc": 0.3,
+      "urgency_acc": 0.433,
+      "emergency_recall": 0.474,
+      "emergency_precision": 0.6,
+      "sent_to_review": 0.0
+    },
+    "all": {
+      "intent_acc": 0.483,
+      "urgency_acc": 0.542,
+      "emergency_recall": 0.756,
+      "emergency_precision": 0.738,
+      "sent_to_review": 0.0
+    },
+    "en": {
+      "intent_acc": 0.667,
+      "urgency_acc": 0.65,
+      "emergency_recall": 1.0,
+      "emergency_precision": 0.815,
+      "sent_to_review": 0.0
+    }
+  },
+  {
+    "config": "laya reader (vega), zero-shot",
+    "median_ms": 91.3,
+    "ar": {
+      "intent_acc": 0.433,
+      "urgency_acc": 0.367,
+      "emergency_recall": 1.0,
+      "emergency_precision": 0.358,
+      "sent_to_review": 0.983
+    },
+    "all": {
+      "intent_acc": 0.467,
+      "urgency_acc": 0.392,
+      "emergency_recall": 1.0,
+      "emergency_precision": 0.41,
+      "sent_to_review": 0.958
+    },
+    "en": {
+      "intent_acc": 0.5,
+      "urgency_acc": 0.417,
+      "emergency_recall": 1.0,
+      "emergency_precision": 0.468,
+      "sent_to_review": 0.933
+    }
+  },
+  {
+    "config": "laya reader (vega), fitted heads",
+    "median_ms": 119.0,
+    "ar": {
+      "intent_acc": 0.517,
+      "urgency_acc": 0.75,
+      "emergency_recall": 0.789,
+      "emergency_precision": 0.714,
+      "sent_to_review": 0.983
+    },
+    "all": {
+      "intent_acc": 0.575,
+      "urgency_acc": 0.725,
+      "emergency_recall": 0.805,
+      "emergency_precision": 0.805,
+      "sent_to_review": 0.95
+    },
+    "en": {
+      "intent_acc": 0.633,
+      "urgency_acc": 0.7,
+      "emergency_recall": 0.818,
+      "emergency_precision": 0.9,
+      "sent_to_review": 0.917
+    }
+  }
+]

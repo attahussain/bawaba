@@ -1,0 +1,28 @@
+[
+  {
+    "config": "Claude judge (claude-opus-5-5, effort=low)",
+    "median_ms": 2127.1,
+    "ar": {
+      "intent_acc": 0.783,
+      "urgency_acc": 0.95,
+      "emergency_recall": 1.0,
+      "emergency_precision": 1.0,
+      "sent_to_review": 0.0
+    },
+    "all": {
+      "intent_acc": 0.733,
+      "urgency_acc": 0.95,
+      "emergency_recall": 1.0,
+      "emergency_precision": 0.976,
+      "sent_to_review": 0.0
+    },
+    "en": {
+      "intent_acc": 0.683,
+      "urgency_acc": 0.95,
+      "emergency_recall": 1.0,
+      "emergency_precision": 0.957,
+      "sent_to_review": 0.0
+    },
+    "cost_usd": 0.531
+  }
+]

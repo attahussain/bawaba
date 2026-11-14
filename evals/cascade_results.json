@@ -1,0 +1,79 @@
+[
+  {
+    "threshold": 0.0,
+    "to_claude": 0.0,
+    "intent_acc": 0.575,
+    "urgency_acc": 0.725,
+    "urgency_acc_en": 0.7,
+    "urgency_acc_ar": 0.75,
+    "emergency_recall": 0.805,
+    "avg_ms": 90.5,
+    "cost_per_1000_usd": 0.0
+  },
+  {
+    "threshold": 0.5,
+    "to_claude": 0.525,
+    "intent_acc": 0.708,
+    "urgency_acc": 0.85,
+    "urgency_acc_en": 0.8,
+    "urgency_acc_ar": 0.9,
+    "emergency_recall": 0.927,
+    "avg_ms": 1146.2,
+    "cost_per_1000_usd": 2.31
+  },
+  {
+    "threshold": 0.6,
+    "to_claude": 0.725,
+    "intent_acc": 0.75,
+    "urgency_acc": 0.892,
+    "urgency_acc_en": 0.867,
+    "urgency_acc_ar": 0.917,
+    "emergency_recall": 0.951,
+    "avg_ms": 1548.4,
+    "cost_per_1000_usd": 3.19
+  },
+  {
+    "threshold": 0.7,
+    "to_claude": 0.883,
+    "intent_acc": 0.733,
+    "urgency_acc": 0.925,
+    "urgency_acc_en": 0.9,
+    "urgency_acc_ar": 0.95,
+    "emergency_recall": 0.976,
+    "avg_ms": 1866.8,
+    "cost_per_1000_usd": 3.89
+  },
+  {
+    "threshold": 0.8,
+    "to_claude": 0.942,
+    "intent_acc": 0.75,
+    "urgency_acc": 0.942,
+    "urgency_acc_en": 0.933,
+    "urgency_acc_ar": 0.95,
+    "emergency_recall": 0.976,
+    "avg_ms": 1984.1,
+    "cost_per_1000_usd": 4.15
+  },
+  {
+    "threshold": 0.9,
+    "to_claude": 0.967,
+    "intent_acc": 0.75,
+    "urgency_acc": 0.95,
+    "urgency_acc_en": 0.95,
+    "urgency_acc_ar": 0.95,
+    "emergency_recall": 1.0,
+    "avg_ms": 2034.4,
+    "cost_per_1000_usd": 4.26
+  },
+  {
+    "threshold": 1.01,
+    "to_claude": 1.0,
+    "intent_acc": 0.75,
+    "urgency_acc": 0.95,
+    "urgency_acc_en": 0.95,
+    "urgency_acc_ar": 0.95,
+    "emergency_recall": 1.0,
+    "avg_ms": 2101.4,
+    "cost_per_1000_usd": 4.41
+  }
+]

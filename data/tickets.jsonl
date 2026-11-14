@@ -1,0 +1,240 @@
+{"text": "Hi, the bathroom tap in flat 1204 is dripping slowly. Not urgent, whenever the technician is free this week is fine. Thanks!", "lang": "en", "intent": "maintenance", "urgency": "routine"}
+{"text": "Kitchen cabinet hinge broken, door hanging. Pls send someone.", "lang": "en", "intent": "maintenance", "urgency": "routine"}
+{"text": "Good morning. Could maintenance replace the bulb in our balcony light? It's a special size and I couldn't find it at the hypermarket. Apartment 2307.", "lang": "en", "intent": "maintenance", "urgency": "routine"}
+{"text": "AC filter cleaning due i think, last done 6 months back. Can u schedule for saturday morning?", "lang": "en", "intent": "maintenance", "urgency": "routine"}
+{"text": "Dear team, the grout in the master shower is getting black and some tiles look loose near the corner. No leak yet but I would like someone to check and reseal when possible. I am home most evenings after 6pm. Regards, unit 1810.", "lang": "en", "intent": "maintenance", "urgency": "routine"}
+{"text": "Saw a couple of small cockroaches near the sink. Can you add our flat to the next pest control round?", "lang": "en", "intent": "maintenance", "urgency": "routine"}
+{"text": "The washing machine drain hose is a bit loose, makes noise during spin. Nothing urgent.", "lang": "en", "intent": "maintenance", "urgency": "routine"}
+{"text": "Hello, toilet flush is weak, need to press twice every time. Flat 905. Any day next week ok.", "lang": "en", "intent": "maintenance", "urgency": "routine"}
+{"text": "AC in the kids bedroom blowing warm air since yesterday. Other rooms ok but its very hot at night for them. Can someone come tomorow?", "lang": "en", "intent": "maintenance", "urgency": "soon"}
+{"text": "Kitchen sink is draining very slow, water stays for like 10 min. Tried hot water, didnt help. Please send plumber today or tomorrow.", "lang": "en", "intent": "maintenance", "urgency": "soon"}
+{"text": "Hi, our fridge stopped cooling properly, it's provided with the apartment. Food will spoil soon. Unit 3102, please arrange technician asap.", "lang": "en", "intent": "maintenance", "urgency": "soon"}
+{"text": "There is a damp patch on the ceiling of my guest bathroom, getting bigger since monday. Maybe from the flat above? Not dripping yet but please check before it gets worse.", "lang": "en", "intent": "maintenance", "urgency": "soon"}
+{"text": "Bedroom socket sparked once when I plugged in my charger. I've stopped using it. Kindly send electrician.", "lang": "en", "intent": "maintenance", "urgency": "soon"}
+{"text": "We have seen bed bugs on the sofa and mattress, my son has bites. Need pest control urgently this week please. Flat 1416.", "lang": "en", "intent": "maintenance", "urgency": "soon"}
+{"text": "Water heater not working, only cold water coming. Shower ok for now but need fix soon pls.", "lang": "en", "intent": "maintenance", "urgency": "soon"}
+{"text": "The dishwasher leaked a bit this morning, I mopped it and turned it off. Can someone take a look in next day or two?", "lang": "en", "intent": "maintenance", "urgency": "soon"}
+{"text": "URGENT!! Water pouring from ceiling in living room, near the light fixture!! Flat 2011. Please send someone NOW, I turned off main switch but water still coming.", "lang": "en", "intent": "maintenance", "urgency": "emergency"}
+{"text": "No AC in whole apartment since 2pm, inside temp is 34. I have elderly mother with heart condition at home. Please send technician immediately.", "lang": "en", "intent": "maintenance", "urgency": "emergency"}
+{"text": "Strong burning smell coming from the electrical DB box in our corridor and it's making buzzing sound. We left the flat. Please come quick.", "lang": "en", "intent": "maintenance", "urgency": "emergency"}
+{"text": "Total power cut in my unit 1702, neighbours have electricity. Breakers all look fine. Baby at home and its 45 outside, AC off. Help pls", "lang": "en", "intent": "maintenance", "urgency": "emergency"}
+{"text": "Hi, locked out of my apartment, it's 1:30am and my phone is about to die. Security says they need management approval for spare key. Unit 808, please help urgently.", "lang": "en", "intent": "maintenance", "urgency": "emergency"}
+{"text": "Pipe under kitchen sink burst, water everywhere, cant find the valve to close it!!! Its flooding into hallway", "lang": "en", "intent": "maintenance", "urgency": "emergency"}
+{"text": "No water at all in flat 2605 since morning. Cannot use toilet or cook. Please fix urgently.", "lang": "en", "intent": "maintenance", "urgency": "emergency"}
+{"text": "Saw a snake near the pool level stairs going to the parking, kids play there. Please send pest control immediatly before someone gets hurt.", "lang": "en", "intent": "maintenance", "urgency": "emergency"}
+{"text": "السلام عليكم، أرجو جدولة صيانة دورية لمكيف الشقة 1204، أعتقد أن الفلتر يحتاج إلى تنظيف. أي وقت هذا الأسبوع مناسب بعد الساعة الرابعة عصراً.", "lang": "ar", "intent": "maintenance", "urgency": "routine"}
+{"text": "مرحبا، لمبة الممر عندي في الشقة خربانة من كم يوم، ممكن حد يمر يبدلها؟ مو مستعجل", "lang": "ar", "intent": "maintenance", "urgency": "routine"}
+{"text": "يوجد تسريب بسيط جداً من صنبور المطبخ، مجرد قطرات متقطعة. متى يمكن إرسال فني؟", "lang": "ar", "intent": "maintenance", "urgency": "routine"}
+{"text": "شفت كم صرصور صغير في المطبخ، ودي ترشون الشقة المرة الجاية لما تسوون رش للبناية", "lang": "ar", "intent": "maintenance", "urgency": "routine"}
+{"text": "باب خزانة الحمام لا يُغلق جيداً، المفصلة مرتخية. شكراً", "lang": "ar", "intent": "maintenance", "urgency": "routine"}
+{"text": "هلا، الشطاف في الحمام الثاني ضعيف شوي، يبيله تشييك. الشقة 803", "lang": "ar", "intent": "maintenance", "urgency": "routine"}
+{"text": "أود الاستفسار عن موعد الصيانة السنوية لسخان المياه، فقد مر اكثر من عام على آخر فحص.", "lang": "ar", "intent": "maintenance", "urgency": "routine"}
+{"text": "السلام عليكم، فيه ابريز في الصالة ما يشتغل، باقي الابريزات تمام. متى تقدرون ترسلون كهربائي؟", "lang": "ar", "intent": "maintenance", "urgency": "routine"}
+{"text": "المكيف في غرفة النوم لا يبرد جيداً منذ أمس، والحرارة مرتفعة في الغرفة ولدينا طفل صغير. نرجو إرسال فني اليوم أو غداً على الأكثر.", "lang": "ar", "intent": "maintenance", "urgency": "soon"}
+{"text": "الثلاجه وقفت تبرد من الصبح، الاكل بيخرب، ابي احد يشوفها باسرع وقت لو سمحتو", "lang": "ar", "intent": "maintenance", "urgency": "soon"}
+{"text": "لاحظت بقعة رطوبة تتسع في سقف الحمام، ويبدو أن هناك تسريباً من الشقة العلوية. أرجو الفحص قبل أن تتفاقم المشكلة.", "lang": "ar", "intent": "maintenance", "urgency": "soon"}
+{"text": "المغسله مسدوده والماي ما ينزل ابد، جربت كل شي. ابي سباك بكره الصبح اذا ممكن", "lang": "ar", "intent": "maintenance", "urgency": "soon"}
+{"text": "ظهرت آثار نمل أبيض قرب إطار باب الشرفة، وأخشى أن ينتشر. متى يمكن لفريق مكافحة الحشرات الحضور؟", "lang": "ar", "intent": "maintenance", "urgency": "soon"}
+{"text": "الغساله تطلع صوت قوي وتهز وايد وقت العصر، خايف تخرب. الشقه 1507 برج ب", "lang": "ar", "intent": "maintenance", "urgency": "soon"}
+{"text": "سخان الماء لا يعمل والماء بارد تماماً منذ يومين. أرجو المتابعة.", "lang": "ar", "intent": "maintenance", "urgency": "soon"}
+{"text": "يا جماعة الكهربا تطفي وتشتغل في المطبخ كل شوي، القاطع ينزل. شوفوا لنا حل اليوم الله يخليكم", "lang": "ar", "intent": "maintenance", "urgency": "soon"}
+{"text": "عاجل!! في ماي ينزل من السقف على الكهربا في المطبخ، الشقه 2201 تعالو بسرعه", "lang": "ar", "intent": "maintenance", "urgency": "emergency"}
+{"text": "انقطعت الكهرباء بالكامل عن شقتي منذ ساعة والحرارة 45 درجة في الخارج، ووالدتي مسنة ومريضة. أرجو إرسال أحد فوراً.", "lang": "ar", "intent": "maintenance", "urgency": "emergency"}
+{"text": "ريحة غاز قوية في الممر الدور 14!! طلعنا من الشقه", "lang": "ar", "intent": "maintenance", "urgency": "emergency"}
+{"text": "المكيف المركزي متوقف تماماً والحرارة داخل الشقة تجاوزت 38 درجة. لدينا رضيع، نحتاج تدخلاً عاجلاً من فضلكم.", "lang": "ar", "intent": "maintenance", "urgency": "emergency"}
+{"text": "انقفل علي الباب برا والساعة ٢ الفجر، المفتاح داخل والبطاقه ما تشتغل. معي عيالي الصغار، ابي احد من الامن يفتح لنا", "lang": "ar", "intent": "maintenance", "urgency": "emergency"}
+{"text": "يتصاعد دخان من مقبس الكهرباء في غرفة النوم مع رائحة احتراق واضحة، وقد فصلت القاطع الرئيسي. أرجو إرسال كهربائي حالاً.", "lang": "ar", "intent": "maintenance", "urgency": "emergency"}
+{"text": "انفجر لي تحت المغسله والماي مغرق الارض ويطلع برا الشقه، ما عرفت وين محبس الماي!!", "lang": "ar", "intent": "maintenance", "urgency": "emergency"}
+{"text": "لا توجد مياه نهائياً في الشقة 1110 منذ الصباح، لا في المطبخ ولا في الحمامات. هل هناك عطل عام؟", "lang": "ar", "intent": "maintenance", "urgency": "emergency"}
+{"text": "Hi, can you please email me the receipt for my Q2 rent cheque? Unit 1804. Thanks", "lang": "en", "intent": "payments", "urgency": "routine"}
+{"text": "Is it possible to switch from post-dated cheques to direct debit for next year's contract? What documents do you need from my side?", "lang": "en", "intent": "payments", "urgency": "routine"}
+{"text": "Pls confirm the service charge amount for renewal, want to prepare cheque in advance.", "lang": "en", "intent": "payments", "urgency": "routine"}
+{"text": "Good morning, I would like to know if you accept credit card for the annual parking fee or only bank transfer. Kindly advise.", "lang": "en", "intent": "payments", "urgency": "routine"}
+{"text": "Hello, just checking that you recieved my security deposit transfer last week. Reference was the flat number 2309.", "lang": "en", "intent": "payments", "urgency": "routine"}
+{"text": "Can I collect my old cheques that were replaced last month? No rush, whenever convenient.", "lang": "en", "intent": "payments", "urgency": "routine"}
+{"text": "Kindly share the bank details for paying the move-in fee. Thank you.", "lang": "en", "intent": "payments", "urgency": "routine"}
+{"text": "Dear team, I need a stamped letter showing all rent paid for 2024 for my visa renewal file. Next week is fine.", "lang": "en", "intent": "payments", "urgency": "routine"}
+{"text": "My cheque due on the 1st will bounce, salary is delayed 5 days. Can I replace it with cash before you deposit it? Please reply today.", "lang": "en", "intent": "payments", "urgency": "soon"}
+{"text": "You debited my direct debit TWICE this month!! 2 x AED 8,500 taken from my account. I need the refund asap, I have other bills.", "lang": "en", "intent": "payments", "urgency": "soon"}
+{"text": "Got a late payment fine of AED 500 but I paid on time and have proof of transfer. Please remove it before it shows on my statement.", "lang": "en", "intent": "payments", "urgency": "soon"}
+{"text": "Moving out Thursday and still no clearance on my deposit refund. I need it settled before I fly.", "lang": "en", "intent": "payments", "urgency": "soon"}
+{"text": "Hi, my bank account was closed so the remaining 2 cheques will not clear. Need to arrange replacements this week, who should I meet and when?", "lang": "en", "intent": "payments", "urgency": "soon"}
+{"text": "Access card renewal fee paid 3 days ago but card still showing expired from tomorow. Plz update system", "lang": "en", "intent": "payments", "urgency": "soon"}
+{"text": "Received a notice that my contract won't be renewed due to 'outstanding balance'. I have NO outstanding balance, all receipts with me. Lease ends in 10 days, please call me urgently to sort this out.", "lang": "en", "intent": "payments", "urgency": "soon"}
+{"text": "Payment portal keeps failing when i try pay the chiller fee, deadline is tomorrow. What to do?", "lang": "en", "intent": "payments", "urgency": "soon"}
+{"text": "URGENT. AC was switched off in my apartment for unpaid cooling charges but I paid yesterday, receipt attached. It's 46 degrees and I have a newborn baby. Please restore it right now.", "lang": "en", "intent": "payments", "urgency": "emergency"}
+{"text": "Its 1am and my access card stopped working, guard says account blocked for unpaid fees. I PAID! I'm stuck in the lobby with my two kids. Help", "lang": "en", "intent": "payments", "urgency": "emergency"}
+{"text": "Water supply to our flat was cut saying payment overdue. My elderly mother does dialysis at home and needs water. Please reconnect immediately, I will pay whatever is needed now.", "lang": "en", "intent": "payments", "urgency": "emergency"}
+{"text": "Electricity disconnected tonight over the deposit dispute. My father's oxygen machine runs on power. Send someone now please.", "lang": "en", "intent": "payments", "urgency": "emergency"}
+{"text": "A man is at my door saying he is from management, demanding cash rent tonight and threatening to change the locks. Is this you?? I feel unsafe, please send security to 3105.", "lang": "en", "intent": "payments", "urgency": "emergency"}
+{"text": "I got a message my bounced cheque was filed with police. I already paid cash last week and have your receipt. I fly at 6am for my father's funeral, please withdraw the case tonight!!", "lang": "en", "intent": "payments", "urgency": "emergency"}
+{"text": "car trapped in parking, barrier blocked bc of parking fee, wife in labour need to go hospital NOW", "lang": "en", "intent": "payments", "urgency": "emergency"}
+{"text": "Locks changed today for rent arrears. It's 11pm, nowhere to sleep, my passport and medicines are inside. I transferred the full amount this evening. Please open the door tonight.", "lang": "en", "intent": "payments", "urgency": "emergency"}
+{"text": "السلام عليكم، أرجو تزويدي بإيصال دفع الإيجار لشهر مارس. شكراً.", "lang": "ar", "intent": "payments", "urgency": "routine"}
+{"text": "الساعه ١٢ بالليل وكرت الدخول موقوف، يقولون بسبب دفعه متأخره!! انا واقف برا البنايه ومعاي عيالي، افتحوا لنا الحين", "lang": "ar", "intent": "payments", "urgency": "emergency"}
+{"text": "الشيك الثالث بيستحق بعد يومين وما عندي رصيد كافي، ممكن اأجله اسبوع؟ لاني ما ابي يرتد", "lang": "ar", "intent": "payments", "urgency": "soon"}
+{"text": "مرحبا، ابي اعرف شو اسرع طريقه ادفع فيها رسوم الصيانة، تحويل بنكي ولا بالبطاقه؟", "lang": "ar", "intent": "payments", "urgency": "routine"}
+{"text": "تم قطع التكييف عن شقتي بحجة عدم سداد رسوم التبريد، رغم أنني دفعتها وأملك الإيصال. درجة الحرارة داخل الشقة تجاوزت ٣٨ ووالدتي مسنة ومريضة. أرجو إعادة التشغيل فوراً.", "lang": "ar", "intent": "payments", "urgency": "emergency"}
+{"text": "تم خصم رسوم الصيانة مرتين من بطاقتي هذا الشهر، أرجو مراجعة الأمر وإرجاع المبلغ المكرر في أقرب وقت.", "lang": "ar", "intent": "payments", "urgency": "soon"}
+{"text": "هل يمكن تغيير موعد استحقاق الشيك القادم من يوم 1 إلى يوم 5 من الشهر؟ راتبي ينزل متأخراً قليلاً.", "lang": "ar", "intent": "payments", "urgency": "routine"}
+{"text": "وصلني ايميل انه علي غرامة تأخير ٥٠٠ درهم وانا دافع قبل الموعد!! ارجو التصحيح قبل نهاية الاسبوع", "lang": "ar", "intent": "payments", "urgency": "soon"}
+{"text": "انقطعت الكهربا عن الشقة كلها وفي ورقة على الباب مكتوب بسبب عدم الدفع!! والله دافع. عندي ثلاجة فيها انسولين لازم ترجع الكهربا الحين", "lang": "ar", "intent": "payments", "urgency": "emergency"}
+{"text": "السلام عليكم، سلمت الشيكات حق التجديد للحارس امس، بس ابي اتأكد انها وصلتكم", "lang": "ar", "intent": "payments", "urgency": "routine"}
+{"text": "لم أستلم حتى الآن إيصال دفعة التأمين، والبنك يطلبه مني لإتمام معاملة قرض. أحتاجه خلال يومين من فضلكم.", "lang": "ar", "intent": "payments", "urgency": "soon"}
+{"text": "وصلتني رسالة من رقم مجهول يدّعي أنه من إدارة المبنى ويطلب تحويل الإيجار إلى حساب جديد اليوم وإلا سيتم الإخلاء. أظنها عملية احتيال، وجاري يستعد للتحويل الآن. أرجو تحذير السكان فوراً.", "lang": "ar", "intent": "payments", "urgency": "emergency"}
+{"text": "أود الاستفسار عن إمكانية الدفع بنظام الخصم المباشر بدلاً من الشيكات في العقد الجديد، وما المستندات المطلوبة لذلك؟", "lang": "ar", "intent": "payments", "urgency": "routine"}
+{"text": "الدايركت ديبت ما انخصم هالشهر ومدري ليش، ما ابيكم تحسبونه علي تأخير. شو اسوي؟", "lang": "ar", "intent": "payments", "urgency": "soon"}
+{"text": "الماي مقطوع من الصبح وقالو لي عشان رسوم الخدمات متأخره. عندي طفل رضيع وما في ولا قطره ماي! دفعت الحين اونلاين، ارجو ترجعونه بسرعه", "lang": "ar", "intent": "payments", "urgency": "emergency"}
+{"text": "عطوني كشف حساب بكل اللي دفعته هالسنة لو سمحتو، محتاجنه للشركه", "lang": "ar", "intent": "payments", "urgency": "routine"}
+{"text": "عقدي ينتهي بعد عشرة أيام ولم يتواصل معي أحد بخصوص التجديد وقيمة الإيجار الجديدة. أرجو الرد سريعاً.", "lang": "ar", "intent": "payments", "urgency": "soon"}
+{"text": "شخص في الردهة يطرق الأبواب ويجمع الإيجار نقداً ويقول إنه موظف جديد، ويتصرف بعدوانية مع السكان. هل هو تابع لكم؟ أرجو إرسال الأمن حالاً.", "lang": "ar", "intent": "payments", "urgency": "emergency"}
+{"text": "متى يُعاد مبلغ التأمين بعد إخلاء الشقة؟ سلّمت المفاتيح الأسبوع الماضي.", "lang": "ar", "intent": "payments", "urgency": "routine"}
+{"text": "ياخي محد يرد على التلفون! ابي رقم الحساب الصحيح عشان احول الايجار اليوم ولا باجر", "lang": "ar", "intent": "payments", "urgency": "soon"}
+{"text": "البنك سحب ايجار السنه كامل مره وحده بالغلط من الدايركت ديبت!! حسابي صفر وما اقدر اشتري اكل ولا دوا لابوي. لازم توقفون الخصم وترجعون الفلوس اليوم", "lang": "ar", "intent": "payments", "urgency": "emergency"}
+{"text": "هلا، رسوم بطاقة الدخول الاضافيه كم؟ ابي وحده لزوجتي", "lang": "ar", "intent": "payments", "urgency": "routine"}
+{"text": "تلقيت إشعاراً بأن شيكي قد ارتد، مع أن الرصيد كان متوفراً في الحساب. هل يمكن إعادة إيداعه بدلاً من فرض الغرامة؟", "lang": "ar", "intent": "payments", "urgency": "soon"}
+{"text": "الحارس غيّر قفل شقتي بسبب الإيجار المتأخر وأنا في الخارج، والوقت الآن الثانية فجراً ولا مكان لي للمبيت. سددت المبلغ للتو عبر التطبيق، أرجو فتح الباب حالاً.", "lang": "ar", "intent": "payments", "urgency": "emergency"}
+{"text": "Hi, my lease ends 30 June and I'd like to renew for another year. What documents do you need from me?", "lang": "en", "intent": "move", "urgency": "routine"}
+{"text": "how do i book the service lift for move in next month? thx", "lang": "en", "intent": "move", "urgency": "routine"}
+{"text": "Hello team, could you please send me the move-out checklist so I can prepare before the inspection. Regards", "lang": "en", "intent": "move", "urgency": "routine"}
+{"text": "Is there a fee for the move-in permit or is it included in the rent? Also do the movers need to register at security beforehand?", "lang": "en", "intent": "move", "urgency": "routine"}
+{"text": "Good morning. I am planning to move out at the end of September after 4 years in the building. Kindly advise the notice period required as per my contract and whether I should submit the letter by email or in person at the desk. Thank you.", "lang": "en", "intent": "move", "urgency": "routine"}
+{"text": "Can I get a copy of the move-in inspection report from when I moved in back in 2022? Just need it for my records.", "lang": "en", "intent": "move", "urgency": "routine"}
+{"text": "Hello, what are the allowed moving hours on fridays?", "lang": "en", "intent": "move", "urgency": "routine"}
+{"text": "Dear management, I'd like to know if the rent will change on renewal this year. Pls share the new quote when it's ready, no rush.", "lang": "en", "intent": "move", "urgency": "routine"}
+{"text": "Its been 45 days since I handed over the keys and still no deposit refund. Can someone update me pls?", "lang": "en", "intent": "move", "urgency": "soon"}
+{"text": "My move-out inspection is supposed to be tomorrow at 10am but nobody confirmed. Is it still on? I fly out Thursday.", "lang": "en", "intent": "move", "urgency": "soon"}
+{"text": "Hi, I need to terminate my lease early because my company is relocating me abroad next month. What is the penalty and how quickly can we process this?", "lang": "en", "intent": "move", "urgency": "soon"}
+{"text": "Movers coming Saturday 8am but the service lift booking still shows pending. Please approve asap", "lang": "en", "intent": "move", "urgency": "soon"}
+{"text": "The inspection report charged me AED 1,200 for wall painting but the walls were freshly painted when i left. Photos attached. Please review this before deducting anything from my deposit.", "lang": "en", "intent": "move", "urgency": "soon"}
+{"text": "Renewal deadline is in 5 days and I still haven't recieved the contract to sign. I don't want to lose the flat, please send it.", "lang": "en", "intent": "move", "urgency": "soon"}
+{"text": "Need access cards for my new flat activated. Moving in day after tomorrow and the old tenant's cards are still assigned to the unit.", "lang": "en", "intent": "move", "urgency": "soon"}
+{"text": "I need the clearance letter for the final utilities bill, otherwise I cannot close my account before leaving the country on Monday.", "lang": "en", "intent": "move", "urgency": "soon"}
+{"text": "URGENT movers dropped a wardrobe in the stairwell on 18th floor and it's completely blocking the fire exit. They left for lunch. Please send security now", "lang": "en", "intent": "move", "urgency": "emergency"}
+{"text": "Service lift stuck between floors 22 and 23 with two movers inside!! Please help", "lang": "en", "intent": "move", "urgency": "emergency"}
+{"text": "Moved in today and the AC is not working at all. It's 41 degrees outside and I have a 6 month old baby. Need a technician tonight please.", "lang": "en", "intent": "move", "urgency": "emergency"}
+{"text": "Its 11:30pm, just arrived with all my luggage for move in and the key handover never happened, security says they have no key. I'm standing in the corridor with my two kids. Please send someone.", "lang": "en", "intent": "move", "urgency": "emergency"}
+{"text": "Water pouring from where the washing machine was disconnected during move out, kitchen flooding and it's going under the door to the corridor. Can't find the valve!!", "lang": "en", "intent": "move", "urgency": "emergency"}
+{"text": "Strong gas smell in 1405 after the movers disconected the cooker. We opened the windows and left the flat. Send someone immediately.", "lang": "en", "intent": "move", "urgency": "emergency"}
+{"text": "No electricity in my new apartment since moving in this afternoon, everything is off incl AC and fridge. Summer heat and my elderly mother is with me. Pls urgent", "lang": "en", "intent": "move", "urgency": "emergency"}
+{"text": "Movers broke the glass balcony panel on the 30th floor, shards are hanging loose and could fall on people below. Please cordon off the area downstairs!", "lang": "en", "intent": "move", "urgency": "emergency"}
+{"text": "مرحباً، أرغب في الاستفسار عن إجراءات تجديد عقد الإيجار لشقتي رقم 1204، حيث ينتهي العقد بعد ثلاثة أشهر. ما المستندات المطلوبة؟", "lang": "ar", "intent": "move", "urgency": "routine"}
+{"text": "السلام عليكم، ابي اعرف كم يوم ياخذ استرجاع التامين بعد ما اطلع من الشقه", "lang": "ar", "intent": "move", "urgency": "routine"}
+{"text": "الحقوا علينا!! العمال وهم يطلعون الكنب ضربوا ماسورة الماي في الممر والماي ينزل على الارض وواصل للمصعد، تعالوا بسرعه", "lang": "ar", "intent": "move", "urgency": "emergency"}
+{"text": "سأنتقل من الشقة نهاية الأسبوع القادم، أرجو تحديد موعد لفحص الشقة قبل التسليم في أقرب وقت ممكن.", "lang": "ar", "intent": "move", "urgency": "soon"}
+{"text": "انتقلت اليوم إلى الشقة 2307 ولا توجد كهرباء إطلاقاً، والحرارة داخل الشقة لا تُحتمل ومعي طفل رضيع. أرجو إرسال فني فوراً.", "lang": "ar", "intent": "move", "urgency": "emergency"}
+{"text": "هلا، شو الاوقات المسموحه لنقل العفش؟ ونحتاج نحجز مصعد الخدمة؟", "lang": "ar", "intent": "move", "urgency": "routine"}
+{"text": "مرحبا، عقدي يخلص بعد عشر ايام وللحين ما وصلني رد على طلب التجديد، ابي اعرف الوضع ضروري لاني ما ابي اطلع", "lang": "ar", "intent": "move", "urgency": "soon"}
+{"text": "توني راجع الساعة ٢ الفجر والمفتاح اللي استلمته اليوم ما يفتح باب الشقة، انا واهلي واقفين برا. ارجوكم ارسلوا احد", "lang": "ar", "intent": "move", "urgency": "emergency"}
+{"text": "هل يمكن إنهاء العقد مبكراً؟ وما قيمة الغرامة المترتبة على ذلك؟", "lang": "ar", "intent": "move", "urgency": "routine"}
+{"text": "مر شهر ونصف على تسليمي الشقة ولم يُسترد مبلغ التأمين حتى الآن رغم أن تقرير الفحص كان سليماً. أرجو المتابعة العاجلة.", "lang": "ar", "intent": "move", "urgency": "soon"}
+{"text": "مصعد الخدمة توقف بين الطابقين 15 و16 وبداخله عاملان من شركة النقل مع أثاث ثقيل، وزر الطوارئ لا يستجيب. نرجو التدخل فوراً.", "lang": "ar", "intent": "move", "urgency": "emergency"}
+{"text": "ممكن نموذج اخلاء الطرف؟ شكرا", "lang": "ar", "intent": "move", "urgency": "routine"}
+{"text": "الشباب حقين النقل بيوصلون بكرا الصبح الساعه ٨ وللحين ما حد اكد لي حجز مصعد الخدمه، ياليت تردون اليوم", "lang": "ar", "intent": "move", "urgency": "soon"}
+{"text": "ريحة غاز قوية في المطبخ من بعد ما فكوا العمال الطباخ عشان ينقلونه، سكرت المحبس بس الريحه باقيه. ارسلوا احد الحين", "lang": "ar", "intent": "move", "urgency": "emergency"}
+{"text": "أود معرفة ما إذا كانت هناك زيادة في قيمة الإيجار عند التجديد للعام القادم.", "lang": "ar", "intent": "move", "urgency": "routine"}
+{"text": "تم خصم مبلغ ٣٥٠٠ درهم من التأمين بسبب \"أضرار في الجدران\"، علماً بأنني سلمت الشقة بحالة ممتازة ولدي صور تثبت ذلك. أطلب مراجعة الخصم وتزويدي بتفاصيل الفاتورة، فالمهلة المحددة للاعتراض تنتهي بعد يومين.", "lang": "ar", "intent": "move", "urgency": "soon"}
+{"text": "استلمت الشقة اليوم والمكيف لا يعمل نهائياً، درجة الحرارة في الداخل تجاوزت ٤٠، ووالدتي مسنة ومريضة بالقلب. نحتاج حلاً عاجلاً الليلة.", "lang": "ar", "intent": "move", "urgency": "emergency"}
+{"text": "عندي سؤال، اذا جددت العقد لازم ادفع رسوم ايجاري مره ثانيه؟", "lang": "ar", "intent": "move", "urgency": "routine"}
+{"text": "انا مسافر نهائي بعد اسبوع بسبب الشغل ولازم افسخ العقد بسرعه، شو المطلوب مني بالضبط؟ ومين اكلم؟", "lang": "ar", "intent": "move", "urgency": "soon"}
+{"text": "عمال النقل حاطين الكراتين والدواليب عند باب مخرج الطوارئ في الدور ١٩ وسادين الدرج كله، ولما كلمتهم ما ردوا علي. هذا خطر لو صار حريق!", "lang": "ar", "intent": "move", "urgency": "emergency"}
+{"text": "تحية طيبة، أرجو تزويدي بقائمة الأمور التي يتم فحصها عند معاينة الشقة قبل الخروج، حتى أستعد جيداً.", "lang": "ar", "intent": "move", "urgency": "routine"}
+{"text": "استلمت الشقة أمس ووجدت تسريباً بسيطاً تحت مغسلة الحمام وبقعاً على السقف. أرجو تسجيل ذلك حتى لا يُحسب علي عند الخروج، وإرسال فني خلال يومين.", "lang": "ar", "intent": "move", "urgency": "soon"}
+{"text": "انتقلنا الليلة ولا يوجد ماء في الشقة إطلاقاً، لا في الحمام ولا في المطبخ، ومعنا أطفال. الرجاء الإسراع.", "lang": "ar", "intent": "move", "urgency": "emergency"}
+{"text": "سلمت المفاتيح امس بس كرت الباركنج للحين باسمي ويخصمون مني، ياليت توقفونه", "lang": "ar", "intent": "move", "urgency": "soon"}
+{"text": "Hi, the gym floor hasn't been mopped in 3 days. Sweat marks everywhere. Please arrange cleaning when possible.", "lang": "en", "intent": "complaint", "urgency": "routine"}
+{"text": "Someone keeps parking in my allocated bay B2-114. Not urgent today but its the third time this month, can you send a reminder notice to all residents?", "lang": "en", "intent": "complaint", "urgency": "routine"}
+{"text": "Dear Management, I wish to raise a concern regarding the lobby security guard on the night shift who is often on his phone and does not greet residents. Kindly review. Regards, Apt 1708", "lang": "en", "intent": "complaint", "urgency": "routine"}
+{"text": "Garbage chute room on 22nd floor smells bad. Pls check.", "lang": "en", "intent": "complaint", "urgency": "routine"}
+{"text": "Neighbour in 905 dries clothes on balcony railing, water drips onto my balcony furniture. Can you remind them of the building rules? Thanks", "lang": "en", "intent": "complaint", "urgency": "routine"}
+{"text": "hello, kids playing football in the corridor every evening around 6pm, very loud. not a big issue but kindly put a notice", "lang": "en", "intent": "complaint", "urgency": "routine"}
+{"text": "Pool area loungers are dirty and there are cigarette butts near the jacuzzi. Building is supposed to be no smoking. Requesting more frequent cleaning and maybe a sign.", "lang": "en", "intent": "complaint", "urgency": "routine"}
+{"text": "Visitor parking always full with same cars for weeks. Pretty sure residents using it. Please check when you can.", "lang": "en", "intent": "complaint", "urgency": "routine"}
+{"text": "Upstairs apt 2304 drilling and hammering since 8am on a Friday!! I thought renovation not allowed on weekends. Please stop them today, I work night shifts and need to sleep.", "lang": "en", "intent": "complaint", "urgency": "soon"}
+{"text": "A car is blocking my parking spot right now and I need to leave for the airport in 2 hours. Plate starts with Dubai K. Please find owner asap.", "lang": "en", "intent": "complaint", "urgency": "soon"}
+{"text": "Security at the gate refused entry to my delivery and was very rude to my wife this morning. I want to speak with the security supervisor today please.", "lang": "en", "intent": "complaint", "urgency": "soon"}
+{"text": "Theres a big pile of construction debris left in the 14th floor lift lobby since yesterday, my elderly mother uses walker and cant pass properly. Need it removed today.", "lang": "en", "intent": "complaint", "urgency": "soon"}
+{"text": "Neighbours party in 1102 music very loud its 11.45pm, kids cant sleep. Please send security.", "lang": "en", "intent": "complaint", "urgency": "soon"}
+{"text": "Someone vomited inside lift no. 3 and its still there, smell is horrible. Please send cleaner now.", "lang": "en", "intent": "complaint", "urgency": "soon"}
+{"text": "My neighbour's dog has been barking non stop for 4 hours, I think owner is travelling and dog alone. Concerned for the animal also. Can someone check this afternoon?", "lang": "en", "intent": "complaint", "urgency": "soon"}
+{"text": "Cockroaches coming from the bin room into our apartment after neighbours left garbage bags outside door for days. Need pest control and cleaning this week pls.", "lang": "en", "intent": "complaint", "urgency": "soon"}
+{"text": "URGENT neighbours in 1609 shouting and I heard glass breaking and a woman screaming for help. Please send security immediately and call police!!", "lang": "en", "intent": "complaint", "urgency": "emergency"}
+{"text": "Strong smell of smoke coming from the apartment next door 2710, nobody answering the door. Please send security now!", "lang": "en", "intent": "complaint", "urgency": "emergency"}
+{"text": "A man I dont recognise has been trying door handles on 18th floor, he just tried mine. Security not at desk. Please come quickly, I am alone with my baby.", "lang": "en", "intent": "complaint", "urgency": "emergency"}
+{"text": "Its 1am, security guard lost my spare key you were holding and I'm locked out with two small kids in the corridor. Need someone to open now pls", "lang": "en", "intent": "complaint", "urgency": "emergency"}
+{"text": "Water pouring through my ceiling from upstairs apt, they are not home. Electrical light fitting is getting wet. Shut off their water urgently!!", "lang": "en", "intent": "complaint", "urgency": "emergency"}
+{"text": "Somebody blocked the fire exit door on level 9 with furniture and boxes, also chained the stairwell door. This is dangerous, please clear immediately.", "lang": "en", "intent": "complaint", "urgency": "emergency"}
+{"text": "Car parked across the basement ramp, an ambulance cant get to the entrance for my father who collapsed. Need it moved NOW.", "lang": "en", "intent": "complaint", "urgency": "emergency"}
+{"text": "Neighbour's kids are on the balcony railing 30th floor, parents not responding to knocking. Please send security immediately!", "lang": "en", "intent": "complaint", "urgency": "emergency"}
+{"text": "السلام عليكم، أرجو التنبيه على سكان الطابق ١٤ بعدم ترك أكياس القمامة أمام المصعد، فالرائحة مزعجة منذ أيام.", "lang": "ar", "intent": "complaint", "urgency": "routine"}
+{"text": "مرحبا، الجيران اللي فوقي يسحبون الكراسي كل ليل، ممكن تكلمونهم بهدوء؟ مب مستعجل بس صار شي متكرر", "lang": "ar", "intent": "complaint", "urgency": "routine"}
+{"text": "لاحظت أن حارس البوابة الخلفية لا يرد التحية ويتعامل بجفاف مع الزوار. أتمنى توجيهه بلطف دون إحراجه.", "lang": "ar", "intent": "complaint", "urgency": "routine"}
+{"text": "في سيارة بيضا واقفه بموقفي رقم B2-117 من امس، لو تقدرون تتواصلون مع صاحبها يكون احسن", "lang": "ar", "intent": "complaint", "urgency": "routine"}
+{"text": "الممر في الطابق السابع لم ينظف منذ ثلاثة ايام تقريباً.", "lang": "ar", "intent": "complaint", "urgency": "routine"}
+{"text": "الجيم وسخ والمناشف مرميه عالارض، ياريت تشوفون عامل النظافه", "lang": "ar", "intent": "complaint", "urgency": "routine"}
+{"text": "صوت الكلب في الشقة ٩٠٢ مستمر طوال النهار.", "lang": "ar", "intent": "complaint", "urgency": "routine"}
+{"text": "ودي اقدم شكوى رسميه على الجار اللي يدخن بالبلكونه والدخان كله يدخل عندنا، شو الاجراء؟", "lang": "ar", "intent": "complaint", "urgency": "routine"}
+{"text": "توجد أعمال ترميم في الشقة المجاورة ٢٣٠٤ تبدأ من السابعة صباحاً وتستمر حتى العاشرة ليلاً، وهذا مخالف لأوقات العمل المسموح بها. أرجو التدخل اليوم إن امكن.", "lang": "ar", "intent": "complaint", "urgency": "soon"}
+{"text": "للمرة الثالثة حد ياخذ موقفي، اليوم رجعت من الدوام وما لقيت مكان ووقفت برا البنايه. ابي حل قبل باجر لو سمحتو", "lang": "ar", "intent": "complaint", "urgency": "soon"}
+{"text": "حاوية النفايات في غرفة القمامة بالطابق الأرضي ممتلئة وتفيض، وبدأت الحشرت بالظهور في الممر.", "lang": "ar", "intent": "complaint", "urgency": "soon"}
+{"text": "الحارس اليوم دخل مندوب توصيل لين باب شقتي بدون ما يتصل علي، هذا مب مقبول ابد وابي اعرف ليش صار جذي", "lang": "ar", "intent": "complaint", "urgency": "soon"}
+{"text": "يتساقط ماء من مكيف الجار في الطابق الأعلى على شرفتي باستمرار ويبلل الأثاث، أرجو إرسال أحد للتحقق والتواصل معه.", "lang": "ar", "intent": "complaint", "urgency": "soon"}
+{"text": "الجيران عندهم حفله الحين والصوت عالي وايد والساعه ١٢ ونص، عيالي ما ناموا وعندهم مدرسه الصبح", "lang": "ar", "intent": "complaint", "urgency": "soon"}
+{"text": "المصعد رقم ٢ متسخ جداً وفيه بقع يبدو أنها قيء منذ الصباح، ولم يتم تنظيفه حتى الآن.", "lang": "ar", "intent": "complaint", "urgency": "soon"}
+{"text": "في ناس غرب يجلسون عند المسبح كل يوم ومب ساكنين بالبنايه، كلمت الامن اكثر من مره وما يسوون شي", "lang": "ar", "intent": "complaint", "urgency": "soon"}
+{"text": "عاجل: يوجد شجار عنيف الآن بين شخصين في موقف السيارات بالطابق B1 وأحدهما يحمل أداة حادة. أرجو إرسال الأمن فوراً.", "lang": "ar", "intent": "complaint", "urgency": "emergency"}
+{"text": "الحقووو في ريحة غاز قويه طالعه من الشقه اللي جنبي ١٥٠٨ ودقيت الباب ومحد يرد!!", "lang": "ar", "intent": "complaint", "urgency": "emergency"}
+{"text": "الماء يتدفق بقوة من سقف الحمام قادماً من الشقة العلوية، والجيران غير موجودين. أرجو قطع المياه عنهم فوراً قبل أن يصل إلى الكهرباء.", "lang": "ar", "intent": "complaint", "urgency": "emergency"}
+{"text": "انا برا الشقه والباب انقفل علي والساعه ٢ الفجر ومعاي ياهل صغير، الحارس يقول ما عنده مفتاح، ساعدوني الله يخليكم", "lang": "ar", "intent": "complaint", "urgency": "emergency"}
+{"text": "سيارة تسد مخرج الطوارئ في الموقف، وهناك دخان يخرج من غرفة الكهرباء المجاورة لها!", "lang": "ar", "intent": "complaint", "urgency": "emergency"}
+{"text": "الجار من ساعه يصارخ ويكسر اغراض واسمع صوت حرمه تصيح وتطلب مساعده، ارسلو الامن بسرعه", "lang": "ar", "intent": "complaint", "urgency": "emergency"}
+{"text": "انقطع التكييف والكهرباء عن الطابق كله منذ ساعتين، والحرارة داخل الشقة تجاوزت ٣٨ درجة، ووالدتي مسنة ومريضة ولا تتحمل. نرجو حلاً عاجلاً.", "lang": "ar", "intent": "complaint", "urgency": "emergency"}
+{"text": "في واحد غريب يحاول يفتح باب شقتي الحين ويدق بقوه، والامن تحت ما يردون عالتلفون!!", "lang": "ar", "intent": "complaint", "urgency": "emergency"}
+{"text": "Hi, what are the gym timings during Ramadan? Thanks", "lang": "en", "intent": "other", "urgency": "routine"}
+{"text": "Hello team, can I book the BBQ area on the roof for this Friday evening for around 12 people? Please let me know the procedure and if any deposit is needed.", "lang": "en", "intent": "other", "urgency": "routine"}
+{"text": "Is there any plan to add more bike racks in basement? The current one is always full.", "lang": "en", "intent": "other", "urgency": "routine"}
+{"text": "Dear management, my parents are visiting from Kerala next month for 3 weeks. How do I register them as guests so security lets them in without calling me every time?", "lang": "en", "intent": "other", "urgency": "routine"}
+{"text": "can i get a second access card for my maid, what is the charge", "lang": "en", "intent": "other", "urgency": "routine"}
+{"text": "Hi there! Just wanted to ask if the squash court reopened after the maintenance or still closed? My son keeps asking lol", "lang": "en", "intent": "other", "urgency": "routine"}
+{"text": "Good morning, kindly share the move-out process and NOC requirements. Our lease ends in two months, apartment 1804.", "lang": "en", "intent": "other", "urgency": "routine"}
+{"text": "Suggestion: the kids play area could use some shade, it's too hot to use after 9am even in October. Thanks for considering.", "lang": "en", "intent": "other", "urgency": "routine"}
+{"text": "Visitor parking is full again because some residents leave there cars there for days. My guests arriving in 1 hour, where should they park??", "lang": "en", "intent": "other", "urgency": "soon"}
+{"text": "The pool water looks greenish and cloudy since yesterday. Kids are swimming in it. Can someone check the chemicals today please?", "lang": "en", "intent": "other", "urgency": "soon"}
+{"text": "Hello, my access card stopped working at the lobby gate and gym. Security let me in this time but please reactivate it before tonight, I come back late from work.", "lang": "en", "intent": "other", "urgency": "soon"}
+{"text": "Someone parked in my allocated spot B2-117 since morning. White sedan, no resident sticker. Please arrange to remove or contact owner, I need to go out by 4pm.", "lang": "en", "intent": "other", "urgency": "soon"}
+{"text": "Gym treadmill no.3 belt is slipping badly, someone could fall. Please put out of order sign untill fixed.", "lang": "en", "intent": "other", "urgency": "soon"}
+{"text": "Hi, delivery guy says reception refused my parcel because it's 'too big'. It is a baby cot I need today. Can you please inform the concierge to accept it? Flat 2207.", "lang": "en", "intent": "other", "urgency": "soon"}
+{"text": "Lift no. 2 making a loud grinding noise and stopping a little below floor level. Not stuck yet but feels unsafe, pls send technician today.", "lang": "en", "intent": "other", "urgency": "soon"}
+{"text": "Dear team, the sauna in the ladies changing room is not heating and the door handle is loose. Kindly fix soonest as many residents use it in evening. Regards, Mrs. Petrova", "lang": "en", "intent": "other", "urgency": "soon"}
+{"text": "URGENT - child fainted near the pool, lifeguard not here!! Send someone with first aid NOW, we called ambulance", "lang": "en", "intent": "other", "urgency": "emergency"}
+{"text": "Locked out of my apartment 3112, it's 1:30am, phone almost dead and my baby is inside with nanny who is asleep and not answering. Please send someone with master key immediately.", "lang": "en", "intent": "other", "urgency": "emergency"}
+{"text": "Smell of smoke in the basement parking level B1 near the electrical room, can see a bit of haze. Please send security and check now!", "lang": "en", "intent": "other", "urgency": "emergency"}
+{"text": "Elevator stuck between 14 and 15 floor with 4 people inside including an old man. Alarm button not responding. Help!!", "lang": "en", "intent": "other", "urgency": "emergency"}
+{"text": "Theres a man trying car doors in visitor parking right now, security not at the desk. please come quickly", "lang": "en", "intent": "other", "urgency": "emergency"}
+{"text": "Gas smell very strong in corridor of 9th floor near the garbage chute room. Should we evacuate? Need someone immediatly.", "lang": "en", "intent": "other", "urgency": "emergency"}
+{"text": "Pool deck glass panel is cracked and leaning, it can fall on people below at the entrance. Please cordon the area right now.", "lang": "en", "intent": "other", "urgency": "emergency"}
+{"text": "Hello, we are trapped in the gym, the main door is locked from outside and the lights went off. It's 11pm, there are 3 of us. Please send security urgent.", "lang": "en", "intent": "other", "urgency": "emergency"}
+{"text": "مساء الخير، أود الاستفسار عن مواعيد عمل النادي الرياضى خلال شهر رمضان. شكراً", "lang": "ar", "intent": "other", "urgency": "routine"}
+{"text": "الحقووو في ولد طاح في المسبح وما في منقذ!! طلعناه بس محتاجين مسعف بسرعه", "lang": "ar", "intent": "other", "urgency": "emergency"}
+{"text": "السلام عليكم، في سيارة غريبة واقفة بموقفي من الصبح وانا لازم اطلع بعد ساعتين، ممكن تتصرفون؟", "lang": "ar", "intent": "other", "urgency": "soon"}
+{"text": "السلام عليكم، شلون احجز قاعة الحفلات حق عيد ميلاد ولدي الشهر الياي؟ وكم الرسوم؟", "lang": "ar", "intent": "other", "urgency": "routine"}
+{"text": "رائحة غاز قوية جدا في منطقة الشواء على السطح، أرجو إرسال الأمن فورا وإغلاق المنطقة.", "lang": "ar", "intent": "other", "urgency": "emergency"}
+{"text": "جهاز المشي رقم ٣ في النادي الرياضي يتوقف فجأة أثناء الاستخدام، أرجو إيقافه عن العمل وإصلاحه قبل أن يصاب أحد.", "lang": "ar", "intent": "other", "urgency": "soon"}
+{"text": "هل يمكن تسجيل سيارة ضيف بشكل دائم؟ والدتي تزورنا كل اسبوع تقريبا.", "lang": "ar", "intent": "other", "urgency": "routine"}
+{"text": "واحد عالق في الساونا الباب ما ينفتح من داخل!!! تعالوا بسرعه", "lang": "ar", "intent": "other", "urgency": "emergency"}
+{"text": "الضيوف عندي بيوصلون الساعه ٧ الليلة و مواقف الزوار كلها مليانة، شو الحل؟", "lang": "ar", "intent": "other", "urgency": "soon"}
+{"text": "ابي اعرف اذا مسموح نحط نباتات كبيرة في البلكونة ولا في قوانين للمبنى", "lang": "ar", "intent": "other", "urgency": "routine"}
+{"text": "سيارة متوقفة في مسار الإسعاف أمام المدخل الرئيسي وسيارة الإسعاف لا تستطيع الوصول لوالدي المريض. أرجوكم تصرفوا الآن!", "lang": "ar", "intent": "other", "urgency": "emergency"}
+{"text": "بطاقة الدخول الخاصة بي لم تعد تفتح باب المسبح والنادي منذ أمس. أرجو تفعيلها اليوم إن أمكن.", "lang": "ar", "intent": "other", "urgency": "soon"}
+{"text": "مرحبا، أرجو تزويدي بنسخة من قواعد استخدام المسبح، حيث فقدت النسخة التي استلمتها عند الانتقال.", "lang": "ar", "intent": "other", "urgency": "routine"}
+{"text": "في سلك كهربا مكشوف جنب الجاكوزي والارض كلها ماي، العيال يلعبون هناك، سكروا المكان الحين", "lang": "ar", "intent": "other", "urgency": "emergency"}
+{"text": "ماي المسبح لونه اخضر شوي وريحته غريبه، العيال يبون يسبحون العصر، لو تشيكون عليه قبل", "lang": "ar", "intent": "other", "urgency": "soon"}
+{"text": "هلا، متى بيفتحون ملعب البادل بعد الصيانة؟", "lang": "ar", "intent": "other", "urgency": "routine"}
+{"text": "أغلقت ابنتي الصغيرة على نفسها باب دورة مياه النادي الرياضي ولا نستطيع فتحه، وهي تبكي وخائفة جدا. نحتاج المفتاح فورا", "lang": "ar", "intent": "other", "urgency": "emergency"}
+{"text": "تم حجز منطقة الشواء باسمي يوم الجمعة لكن التطبيق يظهر أن الحجز ملغى! أرجو التأكد بأسرع وقت لأن المدعوين أكدوا الحضور.", "lang": "ar", "intent": "other", "urgency": "soon"}
+{"text": "مساء الخير، أود اقتراح إضافة رفوف للدراجات الهوائية في موقف الطابق السفلي، فالعدد الحالي لا يكفي السكان وأصبح الكثيرون يربطون دراجاتهم بالأعمدة أو يتركونها في الممرات، مما يسبب ازدحاما ومنظرا غير لائق. كما أقترح تخصيص مكان لشحن الدراجات الكهربائية بشكل آمن. مع جزيل الشكر", "lang": "ar", "intent": "other", "urgency": "routine"}
+{"text": "الساعة ١٢ الليل وانا مقفول علي في السطح، باب الدرج تسكر وتلفوني بطاريته بتخلص. ارجوكم حد يطلع يفتح", "lang": "ar", "intent": "other", "urgency": "emergency"}
+{"text": "الساونا ما تسخن من يومين والجاكوزي بعد بارد", "lang": "ar", "intent": "other", "urgency": "soon"}
+{"text": "مرحبا، عندكم خدمة استلام طرود اذا انا مسافر؟ عندي شحنة توصل الاسبوع الياي", "lang": "ar", "intent": "other", "urgency": "routine"}
+{"text": "هناك كلاب يتركها أحد السكان دون رباط في حديقة المبنى، وطفلي خائف جدا من النزول. أرجو التعامل مع الأمر اليوم.", "lang": "ar", "intent": "other", "urgency": "soon"}
+{"text": "سقط أحد الأثقال من الرف في النادي على قدم رجل مسن وهو ينزف ولا يستطيع الحركة، نحتاج مساعدة عاجلة", "lang": "ar", "intent": "other", "urgency": "emergency"}

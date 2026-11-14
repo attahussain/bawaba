@@ -1,0 +1,71 @@
+[
+  {
+    "config": "laya Router, zero-shot",
+    "pairs": 90,
+    "median_ms": 23.0,
+    "en": {
+      "precision": 0.462,
+      "recall": 0.857,
+      "accuracy": 0.833,
+      "positives": 7
+    },
+    "all": {
+      "precision": 0.4,
+      "recall": 0.857,
+      "accuracy": 0.778,
+      "positives": 14
+    },
+    "ar": {
+      "precision": 0.353,
+      "recall": 0.857,
+      "accuracy": 0.714,
+      "positives": 7
+    }
+  },
+  {
+    "config": "laya reader (vega), zero-shot",
+    "pairs": 90,
+    "median_ms": 59.4,
+    "en": {
+      "precision": 0.4,
+      "recall": 0.571,
+      "accuracy": 0.812,
+      "positives": 7
+    },
+    "all": {
+      "precision": 0.45,
+      "recall": 0.643,
+      "accuracy": 0.822,
+      "positives": 14
+    },
+    "ar": {
+      "precision": 0.5,
+      "recall": 0.714,
+      "accuracy": 0.833,
+      "positives": 7
+    }
+  },
+  {
+    "config": "laya reader (vega), fitted gate head",
+    "pairs": 90,
+    "median_ms": 45.1,
+    "en": {
+      "precision": 0.5,
+      "recall": 0.857,
+      "accuracy": 0.854,
+      "positives": 7
+    },
+    "all": {
+      "precision": 0.467,
+      "recall": 0.5,
+      "accuracy": 0.833,
+      "positives": 14
+    },
+    "ar": {
+      "precision": 0.333,
+      "recall": 0.143,
+      "accuracy": 0.81,
+      "positives": 7
+    }
+  }
+]

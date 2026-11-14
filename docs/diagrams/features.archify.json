@@ -1,0 +1,140 @@
+{
+ "schema_version": 1,
+ "diagram_type": "tree",
+ "meta": {
+  "title": "Bawaba Features",
+  "output": "docs/diagrams/features.html",
+  "quality_profile": "showcase",
+  "locale": "en"
+ },
+ "layout": {
+  "direction": "down"
+ },
+ "nodes": [
+  {
+   "id": "root",
+   "label": "Bawaba",
+   "sublabel": "Bilingual service desk"
+  },
+  {
+   "id": "dec",
+   "label": "Fast decisions",
+   "parent": "root",
+   "sublabel": "Laya, local"
+  },
+  {
+   "id": "d1",
+   "label": "Intent triage",
+   "parent": "dec",
+   "sublabel": "5 request types"
+  },
+  {
+   "id": "d2",
+   "label": "Urgency triage",
+   "parent": "dec",
+   "sublabel": "routine, soon, emergency"
+  },
+  {
+   "id": "d3",
+   "label": "Fitted heads",
+   "parent": "dec",
+   "sublabel": "120 labels, 30 s, no fine-tune"
+  },
+  {
+   "id": "d4",
+   "label": "Claude cascade",
+   "parent": "dec",
+   "sublabel": "only when Laya is unsure"
+  },
+  {
+   "id": "ret",
+   "label": "Grounded answers",
+   "parent": "root",
+   "sublabel": "EN + AR"
+  },
+  {
+   "id": "r1",
+   "label": "Bilingual policies",
+   "parent": "ret",
+   "sublabel": "English and Arabic sections"
+  },
+  {
+   "id": "r2",
+   "label": "Hybrid search",
+   "parent": "ret",
+   "sublabel": "BM25 + multilingual vectors"
+  },
+  {
+   "id": "r3",
+   "label": "Evidence gate",
+   "parent": "ret",
+   "sublabel": "relevant? contains answer?"
+  },
+  {
+   "id": "r4",
+   "label": "Cited replies",
+   "parent": "ret",
+   "sublabel": "in the tenant's language"
+  },
+  {
+   "id": "saf",
+   "label": "Safety",
+   "parent": "root",
+   "sublabel": "people first"
+  },
+  {
+   "id": "s1",
+   "label": "Emergency escalation",
+   "parent": "saf",
+   "sublabel": "before any retrieval"
+  },
+  {
+   "id": "s2",
+   "label": "Hand-off to people",
+   "parent": "saf",
+   "sublabel": "no evidence, no LLM call"
+  },
+  {
+   "id": "s3",
+   "label": "Injection removal",
+   "parent": "saf",
+   "sublabel": "sentence by sentence"
+  },
+  {
+   "id": "s4",
+   "label": "No data requests",
+   "parent": "saf",
+   "sublabel": "never asks for cards or IDs"
+  },
+  {
+   "id": "ev",
+   "label": "Evaluation",
+   "parent": "root",
+   "sublabel": "measured, by language"
+  },
+  {
+   "id": "e1",
+   "label": "Triage benchmark",
+   "parent": "ev",
+   "sublabel": "120 held-out messages"
+  },
+  {
+   "id": "e2",
+   "label": "Cascade sweep",
+   "parent": "ev",
+   "sublabel": "cost vs accuracy"
+  },
+  {
+   "id": "e3",
+   "label": "Gate benchmark",
+   "parent": "ev",
+   "sublabel": "Laya vs Claude judge"
+  },
+  {
+   "id": "e4",
+   "label": "End-to-end set",
+   "parent": "ev",
+   "sublabel": "32 questions, 8 tests offline"
+  }
+ ]
+}

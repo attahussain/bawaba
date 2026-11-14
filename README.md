@@ -39,6 +39,8 @@ What the component evaluations found (details in [docs/evaluation.md](docs/evalu
 
 ## How it works
 
+![Bawaba system architecture](docs/diagrams/architecture.png)
+
 ```
 message ─► triage (Laya, Claude when unsure) ─► emergency ─► escalate to the 24-hour team (no LLM)
                                                │
@@ -61,6 +63,19 @@ message ─► triage (Laya, Claude when unsure) ─► emergency ─► escalat
 Every decision is a typed Laya question, and `ClaudeDecider` answers the same questions, so each
 stage can be switched between engines and compared on identical data. Design reasoning and limitations:
 [docs/design.md](docs/design.md).
+
+## Features
+
+![Bawaba features](docs/diagrams/features.png)
+
+## Tech stack
+
+![Bawaba tech stack](docs/diagrams/tech-stack.png)
+
+<sub>Interactive versions (zoom, route tracing, light/dark): download and open
+[architecture](docs/diagrams/architecture.html), [features](docs/diagrams/features.html),
+[tech stack](docs/diagrams/tech-stack.html). Generated with [Archify](https://github.com/tt-a1i/archify)
+from the JSON specs in `docs/diagrams/`.</sub>
 
 ## Quick start
 
@@ -120,7 +135,7 @@ data/kb/         # fictional bilingual policies (+ one untrusted note with an in
 data/tickets.jsonl   # 240 synthetic labelled tenant messages
 data/heads/      # Laya heads fitted on the training half
 evals/           # generators, evaluation scripts, hand-labelled questions
-docs/            # design decisions and evaluation
+docs/            # design decisions, evaluation, diagrams/ (PNG, interactive HTML, Archify specs)
 ```
 
 ## Why this project

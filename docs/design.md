@@ -1,5 +1,7 @@
 # Design decisions
 
+![Bawaba system architecture](diagrams/architecture.png)
+
 ## The idea
 
 Most messages to a service desk do not need a large language model. Some need a person immediately

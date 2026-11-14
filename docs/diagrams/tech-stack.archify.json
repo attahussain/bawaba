@@ -1,0 +1,89 @@
+{
+ "schema_version": 1,
+ "diagram_type": "tree",
+ "meta": {
+  "title": "Bawaba Tech Stack",
+  "output": "docs/diagrams/tech-stack.html",
+  "quality_profile": "showcase",
+  "locale": "en"
+ },
+ "layout": {
+  "direction": "down"
+ },
+ "nodes": [
+  {
+   "id": "root",
+   "label": "Bawaba",
+   "sublabel": "Python 3.11 / 3.12"
+  },
+  {
+   "id": "dm",
+   "label": "Decision models",
+   "parent": "root"
+  },
+  {
+   "id": "a1",
+   "label": "Laya",
+   "parent": "dm",
+   "sublabel": "Router + vega reader"
+  },
+  {
+   "id": "a2",
+   "label": "Claude Opus 5.5",
+   "parent": "dm",
+   "sublabel": "Anthropic SDK"
+  },
+  {
+   "id": "a3",
+   "label": "PyTorch",
+   "parent": "dm",
+   "sublabel": "CUDA or CPU"
+  },
+  {
+   "id": "rt",
+   "label": "Retrieval",
+   "parent": "root"
+  },
+  {
+   "id": "b1",
+   "label": "LanceDB",
+   "parent": "rt",
+   "sublabel": "FTS + vectors"
+  },
+  {
+   "id": "b2",
+   "label": "fastembed",
+   "parent": "rt",
+   "sublabel": "multilingual MiniLM"
+  },
+  {
+   "id": "b3",
+   "label": "Pydantic",
+   "parent": "rt",
+   "sublabel": "structured answers"
+  },
+  {
+   "id": "dl",
+   "label": "Delivery",
+   "parent": "root"
+  },
+  {
+   "id": "c1",
+   "label": "pytest",
+   "parent": "dl",
+   "sublabel": "8 offline tests"
+  },
+  {
+   "id": "c2",
+   "label": "GitHub Actions",
+   "parent": "dl",
+   "sublabel": "CPU test matrix"
+  },
+  {
+   "id": "c3",
+   "label": "CLI",
+   "parent": "dl",
+   "sublabel": "python -m bawaba"
+  }
+ ]
+}

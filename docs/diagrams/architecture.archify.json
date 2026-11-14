@@ -1,0 +1,239 @@
+{
+ "schema_version": 1,
+ "diagram_type": "architecture",
+ "meta": {
+  "title": "Bawaba System Architecture",
+  "output": "docs/diagrams/architecture.html",
+  "quality_profile": "showcase",
+  "locale": "en"
+ },
+ "components": [
+  {
+   "id": "tenant",
+   "type": "external",
+   "label": "Tenant",
+   "sublabel": "English or Arabic",
+   "pos": [
+    40,
+    220
+   ],
+   "size": [
+    130,
+    64
+   ]
+  },
+  {
+   "id": "triage",
+   "type": "backend",
+   "label": "Triage",
+   "sublabel": "Laya reader + fitted heads",
+   "pos": [
+    220,
+    220
+   ],
+   "size": [
+    170,
+    64
+   ]
+  },
+  {
+   "id": "retrieve",
+   "type": "backend",
+   "label": "Retrieve",
+   "sublabel": "BM25 + multilingual vectors",
+   "pos": [
+    440,
+    220
+   ],
+   "size": [
+    170,
+    64
+   ]
+  },
+  {
+   "id": "gate",
+   "type": "security",
+   "label": "Evidence gate",
+   "sublabel": "Laya Router, zero-shot",
+   "pos": [
+    660,
+    220
+   ],
+   "size": [
+    170,
+    64
+   ]
+  },
+  {
+   "id": "writer",
+   "type": "backend",
+   "label": "Answer writer",
+   "sublabel": "cited, tenant's language",
+   "pos": [
+    880,
+    220
+   ],
+   "size": [
+    170,
+    64
+   ]
+  },
+  {
+   "id": "kb",
+   "type": "database",
+   "label": "Policies",
+   "sublabel": "LanceDB, EN + AR",
+   "pos": [
+    440,
+    60
+   ],
+   "size": [
+    170,
+    64
+   ]
+  },
+  {
+   "id": "claude",
+   "type": "external",
+   "label": "Claude Opus 5.5",
+   "sublabel": "structured outputs",
+   "pos": [
+    660,
+    60
+   ],
+   "size": [
+    390,
+    64
+   ]
+  },
+  {
+   "id": "escalate",
+   "type": "security",
+   "label": "24-hour team",
+   "sublabel": "emergency ticket",
+   "pos": [
+    220,
+    400
+   ],
+   "size": [
+    170,
+    64
+   ]
+  },
+  {
+   "id": "handoff",
+   "type": "security",
+   "label": "Service team",
+   "sublabel": "no answer in policy",
+   "pos": [
+    660,
+    400
+   ],
+   "size": [
+    170,
+    64
+   ]
+  }
+ ],
+ "boundaries": [
+  {
+   "kind": "region",
+   "label": "Local GPU, no API cost",
+   "wraps": [
+    "triage",
+    "retrieve",
+    "gate"
+   ]
+  }
+ ],
+ "connections": [
+  {
+   "id": "ask",
+   "from": "tenant",
+   "to": "triage",
+   "label": "message",
+   "variant": "emphasis"
+  },
+  {
+   "id": "routine",
+   "from": "triage",
+   "to": "retrieve",
+   "label": "not urgent"
+  },
+  {
+   "id": "emergency",
+   "from": "triage",
+   "to": "escalate",
+   "label": "emergency",
+   "variant": "security"
+  },
+  {
+   "id": "unsure",
+   "from": "triage",
+   "to": "claude",
+   "label": "if unsure (<0.5)",
+   "variant": "dashed"
+  },
+  {
+   "id": "search",
+   "from": "retrieve",
+   "to": "kb",
+   "label": "search"
+  },
+  {
+   "id": "passages",
+   "from": "retrieve",
+   "to": "gate",
+   "label": "top passages"
+  },
+  {
+   "id": "nothing",
+   "from": "gate",
+   "to": "handoff",
+   "label": "no evidence",
+   "variant": "security"
+  },
+  {
+   "id": "evidence",
+   "from": "gate",
+   "to": "writer",
+   "label": "evidence",
+   "variant": "emphasis"
+  },
+  {
+   "id": "write",
+   "from": "writer",
+   "to": "claude",
+   "label": "answer"
+  }
+ ],
+ "cards": [
+  {
+   "dot": "emerald",
+   "title": "Decisions",
+   "items": [
+    "Typed Laya questions: choice and yes/no",
+    "28-120 ms per decision on a laptop GPU",
+    "Same questions answerable by Claude"
+   ]
+  },
+  {
+   "dot": "cyan",
+   "title": "Cascade",
+   "items": [
+    "Laya decides when confident",
+    "Claude settles uncertain triage",
+    "7x cheaper than Claude for every step"
+   ]
+  },
+  {
+   "dot": "rose",
+   "title": "Safety",
+   "items": [
+    "Emergencies skip retrieval",
+    "No evidence: person, not LLM",
+    "Injected sentences removed"
+   ]
+  }
+ ]
+}

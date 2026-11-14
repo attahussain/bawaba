@@ -1,5 +1,15 @@
-# Community rules (Palm Residences, fictional)
-
+---
+type: Policy
+title: Community rules
+description: Quiet hours, pool and gym, visitor parking.
+sources:
+  - id: handbook
+    resource: Palm Residences tenant handbook, 2026 edition
+    author: team:property-management
+generated: { by: human:property-manager, at: 2026-09-01T09:00:00Z }
+verified: { by: human:property-manager, at: 2026-10-01T09:00:00Z }
+status: stable
+---
 ## Quiet hours
 Quiet hours are 11 pm to 7 am. Report repeated noise to building security on 800-PALM, option 3; security will visit and record the complaint.
 

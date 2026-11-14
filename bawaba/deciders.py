@@ -5,8 +5,10 @@ Questions use Laya's typed format: `choice` (pick one label from `criteria`) and
 or `noul`; Laya's vega reader also adds `route` ("auto" or "review") and `abstain`.
 """
 
+import base64
 import re
 import time
+from pathlib import Path
 from typing import Protocol
 
 from pydantic import BaseModel
@@ -29,7 +31,9 @@ class LayaDecider:
         import laya
 
         self.name = f"laya-{mode}" + ("-fitted" if heads_dir else "")
+        self._laya = laya
         self._model = laya.Router() if mode == "router" else laya.Agent(vegaml=True)
+        self._vision = None if mode == "router" else self._model  # photos need the reader
         if heads_dir:
             self._model.load_calibration(heads_dir)
         self.calls, self.seconds = 0, 0.0
@@ -37,6 +41,17 @@ class LayaDecider:
     def predict(self, state, questions):
         t = time.perf_counter()
         out = self._model.predict(state, questions)
+        self.calls += 1
+        self.seconds += time.perf_counter() - t
+        return out["answers"]
+
+    def predict_image(self, path, questions, text: str = ""):
+        from PIL import Image
+
+        if self._vision is None:
+            self._vision = self._laya.Agent(vegaml=True)
+        t = time.perf_counter()
+        out = self._vision.predict(text or None, questions, image=Image.open(path).convert("RGB"))
         self.calls += 1
         self.seconds += time.perf_counter() - t
         return out["answers"]
@@ -64,16 +79,29 @@ class ClaudeDecider:
         self.input_tokens = self.output_tokens = 0
 
     def predict(self, state, questions):
+        return self._ask(self._prompt(state, questions), questions)
+
+    def predict_image(self, path, questions, text: str = ""):
+        data = base64.standard_b64encode(Path(path).read_bytes()).decode()
+        state = {"tenant_message": text} if text else "the attached photo"
+        content = [{"type": "image", "source": {"type": "base64", "media_type": "image/jpeg", "data": data}},
+                   {"type": "text", "text": self._prompt(state, questions)}]
+        return self._ask(content, questions)
+
+    @staticmethod
+    def _prompt(state, questions) -> str:
         spec = []
         for qid, q in questions.items():
             if q["type"] == "choice":
                 spec.append(f"- {qid} (choice): {q['instructions']} Options: {q['criteria']}")
             else:
                 spec.append(f"- {qid} (yes/no, give probability 0-1 that it is true): {q['instructions']}")
-        prompt = f"<state>\n{state}\n</state>\n\nAnswer each question about the state:\n" + "\n".join(spec)
+        return f"<state>\n{state}\n</state>\n\nAnswer each question about the state:\n" + "\n".join(spec)
+
+    def _ask(self, content, questions):
         t = time.perf_counter()
         resp = self._client.beta.messages.parse(
-            model=self._model, max_tokens=2000, messages=[{"role": "user", "content": prompt}],
+            model=self._model, max_tokens=2000, messages=[{"role": "user", "content": content}],
             output_format=_Judgements, output_config={"effort": self._effort},
         )
         self.calls += 1
@@ -125,6 +153,17 @@ class KeywordDecider:
                 answers[qid] = {"noul": min(1.0, overlap / 3)}
         return answers
 
+    def predict_image(self, path, questions, text: str = ""):
+        """Reads the file name, never the pixels: enough to test the photo path offline."""
+        self.calls += 1
+        name = Path(path).stem.lower()
+        urgency = ("emergency" if re.search(r"collapse|overflow|flood|fire|spark", name)
+                   else "soon" if re.search(r"stain|mould|mold|broken|shatter|hole|peeling", name) else "routine")
+        issue = next((i for i, pat in [("water", r"water|overflow|flood"), ("mould", r"mould|mold"),
+                                       ("broken", r"broken|shatter"), ("structural", r"collapse|hole"),
+                                       ("minor", r"crack")] if re.search(pat, name)), "none")
+        return {"urgency": {"choice": urgency, "probabilities": {}}, "issue": {"choice": issue, "probabilities": {}}}
+
 
 class CascadeDecider:
     """Ask the fast engine first; when its least confident choice is below the threshold, ask the
@@ -157,6 +196,14 @@ class CascadeDecider:
         if confidences and min(confidences) < self.threshold:
             self.escalated += 1
             return self.fallback.predict(state, questions)
+        return answers
+
+    def predict_image(self, path, questions, text: str = ""):
+        answers = self.primary.predict_image(path, questions, text=text)
+        confidences = [max(a["probabilities"].values()) for a in answers.values() if a.get("probabilities")]
+        if confidences and min(confidences) < self.threshold:
+            self.escalated += 1
+            return self.fallback.predict_image(path, questions, text=text)
         return answers
 
 

@@ -83,6 +83,40 @@ collapsed. The shipped gate is zero-shot and tuned for recall; the writer is the
 - Answers that were given contained every expected fact, and no reply repeated the injected request
   for card numbers.
 
+## 5. Photo triage (v0.2)
+
+15 public-domain/CC0 photos from Wikimedia Commons (`data/photos/SOURCES.md`), labelled by hand:
+3 emergency (two collapsed ceilings, an overflowing toilet), 8 soon (water stains, mould, broken
+glass, a broken light fixture, a hole in a wall), 4 routine (a caulk crack, three rooms with no problem).
+
+| Engine | Urgency | Problem type | Emergencies caught | False emergencies | Median time |
+|---|---|---|---|---|---|
+| Laya reader, zero-shot | 0.20 | 0.47 | 3 / 3 | 10 | 760 ms |
+| Claude | 0.73 | 0.87 | 2 / 3 | 3 | 2,026 ms |
+| Cascade below 0.5 (shipped) | 0.73 | 0.87 | 2 / 3 | 3 | Claude on 10 of 15 |
+
+Laya rated normal living rooms as emergencies; its confidence on those was 0.28-0.36, so the cascade
+passed them to Claude. Claude rated the overflowing toilet "soon", the one missed emergency.
+
+## 6. OKF policies (v0.2)
+
+The policies moved from plain markdown to an OKF v0.2 bundle, with a deprecated 2025 rent policy
+(bounced-cheque fee AED 1,000) and a draft balcony-barbecue rule added. Two questions were added for
+the draft (d01, d02), and the bounced-cheque questions (e06, a06) now also fail if the deprecated fee
+appears. End to end on 34 questions with the shipped configuration:
+
+| | Correct action (EN / AR) | Facts in answers | Injection-safe | No deprecated values | Avg time | Cost |
+|---|---|---|---|---|---|---|
+| Cascade + Laya gate, OKF policies | 0.88 (0.94 / 0.81) | 1.00 | 1.00 | 1.00 | 3.0 s | USD 0.18 |
+
+- The first OKF run appended each concept's status line to its text. That run flagged one reply as
+  unsafe: the contractor note's injected sentence had not been stripped because Laya's injection score
+  dropped from 0.86 to 0.41 with the extra line. Claude's reply was in fact safe (it warned the tenant
+  not to send ID or card details), and the safety metric was narrowed to the attacker's address so a
+  warning is not counted as a leak. Provenance now lives in a separate field; the rerun above strips the
+  injected sentence again.
+- Arabic action accuracy moved between 0.81 and 0.88 across runs; the difference is one question.
+
 ## Reproduce
 
 ```bash
@@ -91,6 +125,7 @@ python evals/triage_eval.py --claude --skip-laya
 python evals/cascade_eval.py             # threshold sweep (Laya + Claude on 120 messages)
 python evals/gate_eval.py                # Laya gate configurations
 python evals/gate_eval.py --claude --skip-laya
+python evals/photo_eval.py               # photo triage (Laya, Claude, cascade)
 python evals/run_qa.py                   # end to end, shipped configuration
 BAWABA_TRIAGE=claude BAWABA_GATE=claude python evals/run_qa.py
 ```

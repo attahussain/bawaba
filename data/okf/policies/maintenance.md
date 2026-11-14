@@ -1,5 +1,15 @@
-# Maintenance requests (Palm Residences, fictional)
-
+---
+type: Policy
+title: Maintenance requests
+description: Response times, how to report, and who pays.
+sources:
+  - id: handbook
+    resource: Palm Residences tenant handbook, 2026 edition
+    author: team:property-management
+generated: { by: human:property-manager, at: 2026-09-01T09:00:00Z }
+verified: { by: human:property-manager, at: 2026-10-01T09:00:00Z }
+status: stable
+---
 ## Response times
 Emergencies (water leaks near electrics, no power, no water, gas smell, AC failure in summer) are attended within 4 hours, day or night. Routine repairs are scheduled within 3 working days.
 

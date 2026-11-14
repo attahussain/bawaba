@@ -13,9 +13,14 @@ def main() -> int:
     kb = KnowledgeBase(settings)
     kb.ingest()
     desk = Desk(settings, kb)
-    messages = [" ".join(sys.argv[1:])] if len(sys.argv) > 1 else iter(lambda: input("tenant> "), "")
+    args = sys.argv[1:]
+    photo = None
+    if "--photo" in args:  # python -m bawaba "message" --photo path/to/photo.jpg
+        i = args.index("--photo")
+        photo, args = args[i + 1], args[:i] + args[i + 2:]
+    messages = [" ".join(args)] if args else iter(lambda: input("tenant> "), "")
     for message in messages:
-        out = desk.handle(message)
+        out = desk.handle(message, photo=photo)
         print(out.reply)
         print(json.dumps({k: v for k, v in out.to_dict().items() if k != "reply"}, ensure_ascii=False))
     return 0

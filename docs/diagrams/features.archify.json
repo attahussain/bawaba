@@ -47,6 +47,12 @@
    "sublabel": "only when Laya is unsure"
   },
   {
+   "id": "d5",
+   "label": "Photo triage",
+   "parent": "dec",
+   "sublabel": "urgency + problem type"
+  },
+  {
    "id": "ret",
    "label": "Grounded answers",
    "parent": "root",
@@ -75,6 +81,12 @@
    "label": "Cited replies",
    "parent": "ret",
    "sublabel": "in the tenant's language"
+  },
+  {
+   "id": "r5",
+   "label": "OKF policies",
+   "parent": "ret",
+   "sublabel": "draft, stable, deprecated"
   },
   {
    "id": "saf",
@@ -128,13 +140,13 @@
    "id": "e3",
    "label": "Gate benchmark",
    "parent": "ev",
-   "sublabel": "Laya vs Claude judge"
+   "sublabel": "Laya vs Claude judge, photos"
   },
   {
    "id": "e4",
    "label": "End-to-end set",
    "parent": "ev",
-   "sublabel": "32 questions, 8 tests offline"
+   "sublabel": "34 questions, 13 offline tests"
   }
  ]
 }

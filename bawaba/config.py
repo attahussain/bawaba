@@ -27,7 +27,7 @@ class Settings:
     heads_dir: str = field(default_factory=lambda: _env("BAWABA_HEADS", str(ROOT / "data" / "heads")))
     # "fastembed" (multilingual MiniLM, local) or "hash" (tiny offline embedder for tests).
     embedder: str = field(default_factory=lambda: _env("BAWABA_EMBEDDER", "fastembed"))
-    kb_dir: Path = field(default_factory=lambda: Path(_env("BAWABA_KB", str(ROOT / "data" / "kb"))))
+    kb_dir: Path = field(default_factory=lambda: Path(_env("BAWABA_KB", str(ROOT / "data" / "okf"))))
     db_dir: Path = field(default_factory=lambda: Path(_env("BAWABA_DB", str(ROOT / "data" / "lancedb"))))
     top_k: int = field(default_factory=lambda: int(_env("BAWABA_TOP_K", "4")))
     # Evidence gate thresholds on Laya's noul probabilities.

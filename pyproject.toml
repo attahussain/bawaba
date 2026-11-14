@@ -1,6 +1,6 @@
 [project]
 name = "bawaba"
-version = "0.1.0"
+version = "0.2.0"
 description = "Bilingual (English/Arabic) service desk: Laya decides what an LLM may answer, Claude writes the answer"
 requires-python = ">=3.11"
 dependencies = [
@@ -9,6 +9,8 @@ dependencies = [
     "lancedb>=0.41",
     "fastembed>=0.9",
     "pydantic>=2.10",
+    "pyyaml>=6.0",
+    "pillow>=10",
 ]
 
 [project.optional-dependencies]

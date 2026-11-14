@@ -26,7 +26,7 @@
    "id": "triage",
    "type": "backend",
    "label": "Triage",
-   "sublabel": "Laya reader + fitted heads",
+   "sublabel": "text + photo, Laya + heads",
    "pos": [
     220,
     220
@@ -82,7 +82,7 @@
    "id": "kb",
    "type": "database",
    "label": "Policies",
-   "sublabel": "LanceDB, EN + AR",
+   "sublabel": "OKF bundle, EN + AR",
    "pos": [
     440,
     60
@@ -131,6 +131,20 @@
    ],
    "size": [
     170,
+    64
+   ]
+  },
+  {
+   "id": "photo",
+   "type": "external",
+   "label": "Photo",
+   "sublabel": "optional",
+   "pos": [
+    40,
+    60
+   ],
+   "size": [
+    130,
     64
    ]
   }
@@ -205,6 +219,13 @@
    "from": "writer",
    "to": "claude",
    "label": "answer"
+  },
+  {
+   "id": "snap",
+   "from": "photo",
+   "to": "triage",
+   "label": "image",
+   "variant": "dashed"
   }
  ],
  "cards": [
@@ -231,7 +252,7 @@
    "title": "Safety",
    "items": [
     "Emergencies skip retrieval",
-    "No evidence: person, not LLM",
+    "Deprecated policies never indexed",
     "Injected sentences removed"
    ]
   }

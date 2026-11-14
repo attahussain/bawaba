@@ -9,22 +9,39 @@ in **English and Arabic**. A small local decision model, [**Laya**](https://gith
 makes the routing decisions in tens of milliseconds: how urgent is this, what is it about, did search
 find real evidence, is a passage trying to inject instructions. **Claude** writes the answers and settles
 the decisions Laya is unsure about. Emergencies and unanswerable questions go to a person without any
-LLM call.
+LLM call. Tenants can attach a **photo** of the problem, and the building policies are an
+**Open Knowledge Format (OKF v0.2)** bundle, so superseded rules are never quoted and draft rules are
+labelled as drafts.
 
-> The knowledge base, the 240 tenant messages and the evaluation questions are fictional or synthetic.
+> The policies, the 240 tenant messages and the evaluation questions are fictional or synthetic. The 15 test
+> photos are public-domain/CC0 images from Wikimedia Commons ([sources](data/photos/SOURCES.md)).
 
 ## Results
 
-32 end-to-end questions (16 English, 16 Arabic), Claude Opus 5.5, Laya on an RTX 4070 laptop GPU:
+End-to-end questions, Claude Opus 5.5, Laya on an RTX 4070 laptop GPU:
 
-| Configuration | Correct action (EN / AR) | Facts in answers | Injection-safe | Avg time | Cost |
+| Configuration | Questions | Correct action (EN / AR) | Facts in answers | Injection-safe | Avg time | Cost |
+|---|---|---|---|---|---|---|
+| Laya only, zero-shot (v0.1) | 32 | 0.72 (0.76 / 0.67) | 1.00 | 1.00 | 2.2 s | USD 0.09 |
+| Claude makes every decision (v0.1) | 32 | 1.00 (1.00 / 1.00) | 1.00 | 1.00 | 19.5 s | USD 1.10 |
+| Laya + Claude cascade (v0.1) | 32 | 0.88 (0.94 / 0.80) | 1.00 | 1.00 | 2.9 s | USD 0.16 |
+| **Laya + Claude cascade, OKF policies (v0.2, shipped)** | **34** | **0.88 (0.94 / 0.81)** | **1.00** | **1.00** | **3.0 s** | **USD 0.18** |
+
+The cascade is **7x cheaper and 6.7x faster** than having Claude make every decision. All of its
+mistakes are safe ones: the question goes to a person instead of being answered. With the OKF bundle
+it also never quoted the superseded bounced-cheque fee and labelled the draft barbecue rule as a draft.
+
+**Photo triage** (15 labelled photos: collapsed ceilings, an overflowing toilet, water stains, mould,
+broken glass, normal rooms):
+
+| Engine | Urgency correct | Problem type correct | Emergencies caught | False alarms | Median time |
 |---|---|---|---|---|---|
-| Laya only, zero-shot | 0.72 (0.76 / 0.67) | 1.00 | 1.00 | 2.2 s | USD 0.09 |
-| **Laya + Claude cascade (shipped)** | **0.88 (0.94 / 0.80)** | **1.00** | **1.00** | **2.9 s** | **USD 0.16** |
-| Claude makes every decision | 1.00 (1.00 / 1.00) | 1.00 | 1.00 | 19.5 s | USD 1.10 |
+| Laya reader, zero-shot | 0.20 | 0.47 | 3 / 3 | 10 | 760 ms |
+| Claude | 0.73 | 0.87 | 2 / 3 | 3 | 2.0 s |
+| Cascade (shipped) | 0.73 | 0.87 | 2 / 3 | 3 | Claude on 10 of 15 |
 
-The shipped design is **7x cheaper and 6.7x faster** than having Claude make every decision. All four
-of its mistakes were safe ones: the question went to a person instead of being answered.
+Zero-shot Laya calls almost every photo an emergency, but it is unsure exactly there, so the cascade
+hands those photos to Claude and matches Claude with a third fewer calls.
 
 What the component evaluations found (details in [docs/evaluation.md](docs/evaluation.md)):
 
@@ -36,6 +53,8 @@ What the component evaluations found (details in [docs/evaluation.md](docs/evalu
   Claude sees 53% of messages, urgency accuracy is 0.85 (Claude alone: 0.95), and cost and latency halve.
 - **Not every fit helps.** A gate head fitted on 17 positive examples dropped Arabic recall to 0.14,
   so the shipped evidence gate stays zero-shot.
+- **Metadata can hurt a classifier.** Appending each policy's provenance line to its text cut Laya's
+  injection score on the poisoned note from 0.86 to 0.41; provenance now travels in its own field.
 
 ## How it works
 
@@ -56,6 +75,8 @@ message ─► triage (Laya, Claude when unsure) ─► emergency ─► escalat
 | Stage | Engine | Notes |
 |---|---|---|
 | Triage | Laya reader (vega, 0.8B) with fitted heads; Claude below confidence 0.5 | `choice` questions for intent (5) and urgency (3) |
+| Photo triage | Laya reader on the image; Claude below confidence 0.5 | Urgency and problem type; the more urgent of text and photo wins |
+| Policies | OKF v0.2 bundle (`data/okf/`) | Deprecated concepts never indexed; status and trust shown to the writer |
 | Retrieval | LanceDB: BM25 + `paraphrase-multilingual-MiniLM-L12-v2`, reciprocal rank fusion | English and Arabic sections of each policy |
 | Evidence gate | Laya Router (English / multilingual encoders), zero-shot | `noul` questions; injected sentences removed, clean ones kept |
 | Answer | Claude, structured output with citations | Can still declare a question unanswerable |
@@ -82,12 +103,13 @@ from the JSON specs in `docs/diagrams/`.</sub>
 ```bash
 python -m venv .venv && source .venv/bin/activate      # Windows: .venv\Scripts\activate
 # NVIDIA GPU: install a CUDA build of torch first, e.g.
-#   pip install torch --index-url https://download.pytorch.org/whl/cu126
+#   pip install torch torchvision --index-url https://download.pytorch.org/whl/cu126
 pip install -e ".[dev]"
 export ANTHROPIC_API_KEY=sk-ant-...                    # Windows: set ANTHROPIC_API_KEY=...
 
 python -m bawaba "The AC stopped working and it is 45 degrees"
 python -m bawaba "كيف أسترد مبلغ التأمين عند إخلاء الشقة؟"
+python -m bawaba "Please check this" --photo data/photos/ceiling-collapse-1.jpg
 python -m bawaba                                       # interactive
 ```
 
@@ -104,6 +126,7 @@ BAWABA_PROVIDER=mock BAWABA_TRIAGE=keyword BAWABA_GATE=keyword BAWABA_EMBEDDER=h
 | `BAWABA_TRIAGE` | `cascade` | `cascade`, `laya` (zero-shot), `laya-fitted`, `claude` or `keyword` (tests) |
 | `BAWABA_GATE` | `laya` | `laya`, `claude` or `keyword` |
 | `BAWABA_CASCADE_THRESHOLD` | `0.5` | Below this Laya confidence, triage asks Claude |
+| `BAWABA_KB` | `data/okf` | OKF bundle of policies |
 | `BAWABA_HEADS` | `data/heads` | Fitted triage heads (written by `evals/triage_eval.py`) |
 | `BAWABA_PROVIDER` | `claude` | Answer writer: `claude` or `mock` |
 | `BAWABA_MODEL` / `BAWABA_EFFORT` | `claude-opus-5-5` / `low` | Claude model and effort |
@@ -113,10 +136,11 @@ BAWABA_PROVIDER=mock BAWABA_TRIAGE=keyword BAWABA_GATE=keyword BAWABA_EMBEDDER=h
 ## Tests and evaluation
 
 ```bash
-pytest                                   # 8 offline tests: paths, gate, injection, cascade, data split
+pytest                                   # 13 offline tests: paths, photos, OKF lifecycle, gate, injection, cascade
 python evals/triage_eval.py              # triage: Laya zero-shot vs reader vs fitted heads (local)
 python evals/cascade_eval.py             # Laya -> Claude threshold sweep
 python evals/gate_eval.py                # evidence gate configurations
+python evals/photo_eval.py               # photo triage: Laya vs Claude vs cascade
 python evals/run_qa.py                   # end to end, shipped configuration
 ```
 
@@ -129,9 +153,12 @@ bawaba/
   triage.py      # intent and urgency questions
   gate.py        # evidence questions, sentence-level injection removal
   kb.py          # bilingual section chunks, BM25 + multilingual vector search
+  okf.py         # OKF v0.2 bundle loader: status, trust tier, provenance
+  photo.py       # photo urgency and problem-type questions
   answer.py      # Claude writer (structured, cited) and offline mock
   config.py      # settings from environment variables
-data/kb/         # fictional bilingual policies (+ one untrusted note with an injected instruction)
+data/okf/        # policies as an OKF bundle: reviewed, draft, deprecated, and one untrusted note
+data/photos/     # 15 public-domain/CC0 photos with hand labels and sources
 data/tickets.jsonl   # 240 synthetic labelled tenant messages
 data/heads/      # Laya heads fitted on the training half
 evals/           # generators, evaluation scripts, hand-labelled questions

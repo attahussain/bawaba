@@ -1,5 +1,15 @@
-# Moving in, renewal and termination (Palm Residences, fictional)
-
+---
+type: Policy
+title: Moving, renewal and termination
+description: Renewal, early termination and move-out inspection.
+sources:
+  - id: handbook
+    resource: Palm Residences tenant handbook, 2026 edition
+    author: team:property-management
+generated: { by: human:property-manager, at: 2026-09-01T09:00:00Z }
+verified: { by: human:property-manager, at: 2026-10-01T09:00:00Z }
+status: stable
+---
 ## Contract renewal
 Renewal offers are sent 90 days before the contract ends. Tenants must confirm renewal or give notice to leave at least 60 days before the end date.
 

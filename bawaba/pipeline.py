@@ -7,6 +7,7 @@ from bawaba.answer import make_writer
 from bawaba.deciders import make_decider
 from bawaba.gate import gate
 from bawaba.kb import KnowledgeBase, language
+from bawaba.photo import most_urgent, triage_photo
 from bawaba.triage import triage
 
 HANDOFF = {
@@ -31,6 +32,7 @@ class Outcome:
     dropped: list[dict] = field(default_factory=list)
     stripped: list[str] = field(default_factory=list)
     timings_ms: dict = field(default_factory=dict)
+    photo: dict = field(default_factory=dict)  # {"urgency", "issue"} when a photo was attached
 
     def to_dict(self) -> dict:
         return asdict(self)
@@ -44,13 +46,20 @@ class Desk:
         self.gate_decider = gate_decider or make_decider(settings.gate, settings)
         self.writer = writer or make_writer(settings)
 
-    def handle(self, message: str) -> Outcome:
+    def handle(self, message: str, photo: str | None = None) -> Outcome:
         lang, ms = language(message), {}
         t = time.perf_counter()
         tri = triage(self.triage_decider, message)
         ms["triage"] = round((time.perf_counter() - t) * 1000, 1)
-        base = {"lang": lang, "intent": tri.intent, "urgency": tri.urgency}
-        if tri.urgency == "emergency":
+        urgency, photo_info = tri.urgency, {}
+        if photo:
+            t = time.perf_counter()
+            pt = triage_photo(self.triage_decider, photo, message)
+            ms["photo"] = round((time.perf_counter() - t) * 1000, 1)
+            urgency = most_urgent(tri.urgency, pt.urgency)  # a calm message with an alarming photo still escalates
+            photo_info = {"urgency": pt.urgency, "issue": pt.issue}
+        base = {"lang": lang, "intent": tri.intent, "urgency": urgency, "photo": photo_info}
+        if urgency == "emergency":
             return Outcome("escalate", ESCALATE[lang], timings_ms=ms, **base)
 
         t = time.perf_counter()

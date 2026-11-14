@@ -5254,8 +5254,8 @@ OTHER DEALINGS IN THE FONT SOFTWARE.
 
         <!-- Connection paths (before components for correct z-order) -->
         <g data-graph-role="automatic-crossover" style="--step:0">
-          <path data-graph-role="automatic-crossover-underlay" d="M 170 252 L 220 252" fill="none" stroke="var(--mask)" stroke-width="5.8" stroke-linecap="round" stroke-linejoin="round" pointer-events="none"/>
-          <path data-edge-from="tenant" data-edge-to="triage" data-edge-label="message" data-edge-key="0" data-edge-id="ask" data-composition-points="170,252;220,252" data-composition-crossover="halo" data-composition-independent="true" d="M 170 252 L 220 252" class="a-emphasis" data-animate="edge" style="--step:0" stroke-width="1.8" marker-end="url(#arrowhead-emphasis)"/>
+          <path data-graph-role="automatic-crossover-underlay" d="M 170 260.05 L 220 260.05" fill="none" stroke="var(--mask)" stroke-width="5.8" stroke-linecap="round" stroke-linejoin="round" pointer-events="none"/>
+          <path data-edge-from="tenant" data-edge-to="triage" data-edge-label="message" data-edge-key="0" data-edge-id="ask" data-composition-points="170,260.05;220,260.05" data-composition-crossover="halo" data-composition-independent="true" d="M 170 260.05 L 220 260.05" class="a-emphasis" data-animate="edge" style="--step:0" stroke-width="1.8" marker-end="url(#arrowhead-emphasis)"/>
         </g>
         <g data-graph-role="automatic-crossover" style="--step:1">
           <path data-graph-role="automatic-crossover-underlay" d="M 319 220 L 319 204 Q 319 196 327 196 L 503 196 Q 511 196 511 204 L 511 220" fill="none" stroke="var(--mask)" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round" pointer-events="none"/>
@@ -5289,6 +5289,10 @@ OTHER DEALINGS IN THE FONT SOFTWARE.
           <path data-graph-role="automatic-crossover-underlay" d="M 965 220 L 965 124" fill="none" stroke="var(--mask)" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round" pointer-events="none"/>
           <path data-edge-from="writer" data-edge-to="claude" data-edge-label="answer" data-edge-key="8" data-edge-id="write" data-composition-points="965,220;965,124" data-composition-crossover="halo" data-composition-independent="true" d="M 965 220 L 965 124" class="a-default" data-animate="edge" style="--step:8" stroke-width="1.5" marker-end="url(#arrowhead)"/>
         </g>
+        <g data-graph-role="automatic-crossover" style="--step:9">
+          <path data-graph-role="automatic-crossover-underlay" d="M 170 92 L 283 92 Q 291 92 291 100 L 291 220" fill="none" stroke="var(--mask)" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round" pointer-events="none"/>
+          <path data-edge-from="photo" data-edge-to="triage" data-edge-label="image" data-edge-key="9" data-edge-id="snap" data-composition-points="170,92;291,92;291,220" data-composition-crossover="halo" data-composition-independent="true" d="M 170 92 L 283 92 Q 291 92 291 100 L 291 220" class="a-dashed" data-animate="edge" style="--step:9" stroke-width="1.5" marker-end="url(#arrowhead-dashed)"/>
+        </g>
 
         <!-- Components -->
         <g id="node-tenant" data-node-id="tenant" data-node-label="Tenant" tabindex="0" role="button" aria-label="Focus Tenant, English or Arabic, Architecture component" aria-pressed="false" data-node-kind="external" data-node-sublabel="English or Arabic" data-node-context="Architecture component">
@@ -5303,15 +5307,15 @@ OTHER DEALINGS IN THE FONT SOFTWARE.
         <text data-detail="context" x="105" y="266" class="t-muted" font-size="9" text-anchor="middle">English or Arabic</text>
         </g>
 
-        <g id="node-triage" data-node-id="triage" data-node-label="Triage" tabindex="0" role="button" aria-label="Focus Triage, Laya reader + fitted heads, Local GPU, no API cost" aria-pressed="false" data-node-kind="backend" data-node-sublabel="Laya reader + fitted heads" data-node-context="Local GPU, no API cost">
-          <title>Triage · Laya reader + fitted heads · Local GPU, no API cost</title>
+        <g id="node-triage" data-node-id="triage" data-node-label="Triage" tabindex="0" role="button" aria-label="Focus Triage, text + photo, Laya + heads, Local GPU, no API cost" aria-pressed="false" data-node-kind="backend" data-node-sublabel="text + photo, Laya + heads" data-node-context="Local GPU, no API cost">
+          <title>Triage · text + photo, Laya + heads · Local GPU, no API cost</title>
           <rect x="220" y="220" width="170" height="64" rx="8" class="c-mask"/>
           <rect x="220" y="220" width="170" height="64" rx="8" class="c-backend" data-animate="node" style="--step:1" stroke-width="1.5"/>
           <g aria-hidden="true" data-semantic-sigil="backend" class="semantic-sigil s-backend" transform="translate(226 226) scale(0.6875)">
             <path d="M6 3 3 8l3 5M10 3l3 5-3 5"/>
           </g>
           <text data-node-label="" data-detail-anchor="" x="305" y="250" class="t-primary" font-size="11" font-weight="600" text-anchor="middle">Triage</text>
-        <text data-detail="context" x="305" y="266" class="t-muted" font-size="9" text-anchor="middle">Laya reader + fitted heads</text>
+        <text data-detail="context" x="305" y="266" class="t-muted" font-size="9" text-anchor="middle">text + photo, Laya + heads</text>
         </g>
 
         <g id="node-retrieve" data-node-id="retrieve" data-node-label="Retrieve" tabindex="0" role="button" aria-label="Focus Retrieve, BM25 + multilingual vectors, Local GPU, no API cost" aria-pressed="false" data-node-kind="backend" data-node-sublabel="BM25 + multilingual vectors" data-node-context="Local GPU, no API cost">
@@ -5348,8 +5352,8 @@ OTHER DEALINGS IN THE FONT SOFTWARE.
         <text data-detail="context" x="965" y="266" class="t-muted" font-size="9" text-anchor="middle">cited, tenant&#39;s language</text>
         </g>
 
-        <g id="node-kb" data-node-id="kb" data-node-label="Policies" tabindex="0" role="button" aria-label="Focus Policies, LanceDB, EN + AR, Architecture component" aria-pressed="false" data-node-kind="database" data-node-sublabel="LanceDB, EN + AR" data-node-context="Architecture component">
-          <title>Policies · LanceDB, EN + AR · Architecture component</title>
+        <g id="node-kb" data-node-id="kb" data-node-label="Policies" tabindex="0" role="button" aria-label="Focus Policies, OKF bundle, EN + AR, Architecture component" aria-pressed="false" data-node-kind="database" data-node-sublabel="OKF bundle, EN + AR" data-node-context="Architecture component">
+          <title>Policies · OKF bundle, EN + AR · Architecture component</title>
           <rect x="440" y="60" width="170" height="64" rx="8" class="c-mask"/>
           <rect x="440" y="60" width="170" height="64" rx="8" class="c-database" data-animate="node" style="--step:5" stroke-width="1.5"/>
           <g aria-hidden="true" data-semantic-sigil="database" class="semantic-sigil s-database" transform="translate(446 66) scale(0.6875)">
@@ -5357,7 +5361,7 @@ OTHER DEALINGS IN THE FONT SOFTWARE.
             <path d="M3 4v8c0 1.1 2.2 2 5 2s5-.9 5-2V4M3 8c0 1.1 2.2 2 5 2s5-.9 5-2"/>
           </g>
           <text data-node-label="" data-detail-anchor="" x="525" y="90" class="t-primary" font-size="11" font-weight="600" text-anchor="middle">Policies</text>
-        <text data-detail="context" x="525" y="106" class="t-muted" font-size="9" text-anchor="middle">LanceDB, EN + AR</text>
+        <text data-detail="context" x="525" y="106" class="t-muted" font-size="9" text-anchor="middle">OKF bundle, EN + AR</text>
         </g>
 
         <g id="node-claude" data-node-id="claude" data-node-label="Claude Opus 5.5" tabindex="0" role="button" aria-label="Focus Claude Opus 5.5, structured outputs, Architecture component" aria-pressed="false" data-node-kind="external" data-node-sublabel="structured outputs" data-node-context="Architecture component">
@@ -5396,10 +5400,22 @@ OTHER DEALINGS IN THE FONT SOFTWARE.
         <text data-detail="context" x="745" y="446" class="t-muted" font-size="9" text-anchor="middle">no answer in policy</text>
         </g>
 
+        <g id="node-photo" data-node-id="photo" data-node-label="Photo" tabindex="0" role="button" aria-label="Focus Photo, optional, Architecture component" aria-pressed="false" data-node-kind="external" data-node-sublabel="optional" data-node-context="Architecture component">
+          <title>Photo · optional · Architecture component</title>
+          <rect x="40" y="60" width="130" height="64" rx="8" class="c-mask"/>
+          <rect x="40" y="60" width="130" height="64" rx="8" class="c-external" data-animate="node" style="--step:9" stroke-width="1.5"/>
+          <g aria-hidden="true" data-semantic-sigil="external" class="semantic-sigil s-external" transform="translate(46 66) scale(0.6875)">
+            <rect x="2.5" y="5" width="8.5" height="8" rx="1.5"/>
+            <path d="M8 2.5h5.5V8M13.5 2.5 7.5 8.5"/>
+          </g>
+          <text data-node-label="" data-detail-anchor="" x="105" y="90" class="t-primary" font-size="11" font-weight="600" text-anchor="middle">Photo</text>
+        <text data-detail="context" x="105" y="106" class="t-muted" font-size="9" text-anchor="middle">optional</text>
+        </g>
+
         <!-- Connection labels -->
         <g data-detail="context" data-edge-from="tenant" data-edge-to="triage" data-edge-label="message" data-edge-key="0" data-edge-id="ask">
-          <rect x="173.2" y="232" width="43.6" height="14" rx="3" class="c-mask"/>
-          <text x="195" y="242" class="t-edge-emphasis" font-size="8" text-anchor="middle">message</text>
+          <rect x="173.2" y="240.05" width="43.6" height="14" rx="3" class="c-mask"/>
+          <text x="195" y="250.05" class="t-edge-emphasis" font-size="8" text-anchor="middle">message</text>
         </g>
         <g data-detail="context" data-edge-from="triage" data-edge-to="retrieve" data-edge-label="not urgent" data-edge-key="1" data-edge-id="routine">
           <rect x="386" y="176" width="58" height="14" rx="3" class="c-mask"/>
@@ -5432,6 +5448,10 @@ OTHER DEALINGS IN THE FONT SOFTWARE.
         <g data-detail="context" data-edge-from="writer" data-edge-to="claude" data-edge-label="answer" data-edge-key="8" data-edge-id="write">
           <rect x="945.6" y="200" width="38.8" height="14" rx="3" class="c-mask"/>
           <text x="965" y="210" class="t-edge-default" font-size="8" text-anchor="middle">answer</text>
+        </g>
+        <g data-detail="context" data-edge-from="photo" data-edge-to="triage" data-edge-label="image" data-edge-key="9" data-edge-id="snap">
+          <rect x="274" y="136" width="34" height="14" rx="3" class="c-mask"/>
+          <text x="291" y="146" class="t-edge-dashed" font-size="8" text-anchor="middle">image</text>
         </g>
 
         <!-- Boundary labels (foreground masks keep routes out of titles) -->
@@ -5668,7 +5688,7 @@ OTHER DEALINGS IN THE FONT SOFTWARE.
         </div>
         <ul>
           <li>Emergencies skip retrieval</li>
-          <li>No evidence: person, not LLM</li>
+          <li>Deprecated policies never indexed</li>
           <li>Injected sentences removed</li>
         </ul>
       </div>

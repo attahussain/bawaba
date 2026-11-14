@@ -1,5 +1,15 @@
-# Security deposits (Palm Residences, fictional)
-
+---
+type: Policy
+title: Security deposits
+description: When and how deposits are refunded after move-out.
+sources:
+  - id: handbook
+    resource: Palm Residences tenant handbook, 2026 edition
+    author: team:property-management
+generated: { by: human:property-manager, at: 2026-09-01T09:00:00Z }
+verified: { by: human:property-manager, at: 2026-10-01T09:00:00Z }
+status: stable
+---
 ## Refund after move-out
 The security deposit is refunded within 30 days of the move-out inspection, by bank transfer to the tenant's registered account. The cost of any damage beyond normal wear and tear is deducted, with photos of each item.
 

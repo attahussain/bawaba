@@ -9,6 +9,7 @@ import lancedb
 from lancedb.index import FTS
 
 from bawaba.config import Settings
+from bawaba.okf import load_bundle, provenance
 
 TABLE = "kb"
 _ARABIC = re.compile(r"[؀-ۿ]")
@@ -71,8 +72,15 @@ class KnowledgeBase:
 
     def ingest(self, kb_dir: Path | None = None) -> int:
         rows = []
-        for path in sorted((kb_dir or self.settings.kb_dir).glob("*.md")):
-            rows.extend(chunk(path.stem, path.read_text(encoding="utf-8")))
+        for concept in load_bundle(kb_dir or self.settings.kb_dir):
+            if concept.status == "deprecated":
+                continue  # superseded rules stay in the bundle for history, never in the index
+            stem = concept.concept_id.rsplit("/", 1)[-1]
+            for row in chunk(stem, f"# {concept.title}\n{concept.body}"):
+                # Provenance stays out of `text`: appended there it diluted the gate's injection check
+                # (0.86 -> 0.41 on the contractor note). The writer still sees it next to each passage.
+                row.update(provenance=provenance(concept), status=concept.status, trust=concept.trust)
+                rows.append(row)
         for row, vec in zip(rows, self.embedder.embed([r["text"] for r in rows])):
             row["vector"] = vec
         table = self.db.create_table(TABLE, data=rows, mode="overwrite")
@@ -93,6 +101,6 @@ class KnowledgeBase:
         fused: dict[str, dict] = {}
         for ranking in (vec, kw):
             for rank, hit in enumerate(ranking, start=1):
-                entry = fused.setdefault(hit["chunk_id"], {key: hit[key] for key in ("chunk_id", "doc_id", "title", "text", "lang")} | {"score": 0.0})
+                entry = fused.setdefault(hit["chunk_id"], {key: hit[key] for key in ("chunk_id", "doc_id", "title", "text", "lang", "status", "trust", "provenance")} | {"score": 0.0})
                 entry["score"] += 1.0 / (60 + rank)
         return sorted(fused.values(), key=lambda h: h["score"], reverse=True)[:k]

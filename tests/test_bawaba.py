@@ -13,7 +13,7 @@ from evals.triage_eval import split
 @pytest.fixture()
 def settings(tmp_path):
     return Settings(provider="mock", triage="keyword", gate="keyword", embedder="hash",
-                    kb_dir=ROOT / "data" / "kb", db_dir=tmp_path / "db")
+                    kb_dir=ROOT / "data" / "okf", db_dir=tmp_path / "db")
 
 
 @pytest.fixture()
@@ -26,7 +26,7 @@ def desk(settings):
 def test_language_detection_and_bilingual_chunks():
     assert language("How do I get my deposit back?") == "en"
     assert language("كيف أسترد مبلغ التأمين؟") == "ar"
-    rows = chunk("deposits", (ROOT / "data" / "kb" / "deposits.md").read_text(encoding="utf-8"))
+    rows = chunk("deposits", (ROOT / "data" / "okf" / "policies" / "deposits.md").read_text(encoding="utf-8").split("---", 2)[2])
     assert {r["lang"] for r in rows} == {"en", "ar"}
     assert all(r["chunk_id"].startswith("deposits#") for r in rows)
 
@@ -52,7 +52,7 @@ def test_no_evidence_means_handoff_without_calling_the_llm(desk):
 
 def test_injected_sentence_is_stripped_and_facts_kept(desk):
     out = desk.handle("When is the corridor cleaning schedule?")
-    assert "contractor_note_untrusted#0" in out.stripped
+    assert "contractor-note#0" in out.stripped
     assert out.action == "answer" and "Tuesday" in out.reply
     assert "card" not in out.reply.lower() and "@" not in out.reply
 
@@ -88,3 +88,35 @@ def test_triage_split_is_stratified_and_disjoint():
     assert len(fit) == len(test) == 12
     assert not {r["text"] for r in fit} & {r["text"] for r in test}
     assert {(r["lang"], r["intent"]) for r in fit} == {(r["lang"], r["intent"]) for r in test}
+
+
+def test_photo_escalates_even_when_the_message_is_calm(desk):
+    out = desk.handle("Please have a look when you can", photo=str(ROOT / "data" / "photos" / "ceiling-collapse-1.jpg"))
+    assert out.action == "escalate" and out.photo == {"urgency": "emergency", "issue": "structural"}
+
+
+def test_harmless_photo_does_not_raise_urgency(desk):
+    out = desk.handle("How long until my security deposit is refunded after move-out?",
+                      photo=str(ROOT / "data" / "photos" / "living-room-1.jpg"))
+    assert out.action == "answer" and out.photo["urgency"] == "routine"
+
+
+def test_deprecated_policy_is_never_indexed_and_drafts_are_labelled(desk):
+    texts = [h["text"] for h in desk.kb.search("bounced cheque fee", k=10)]
+    assert not any("1,000" in t or "1000" in t for t in texts)  # the 2025 fee is deprecated
+    bbq = [h for h in desk.kb.search("balcony barbecue grill", k=10) if h["doc_id"] == "balcony-bbq"]
+    assert bbq and bbq[0]["status"] == "draft" and "unverified" in bbq[0]["provenance"]
+
+
+def test_policies_carry_trust_from_the_bundle():
+    from bawaba.okf import load_bundle
+
+    concepts = {c.concept_id: c for c in load_bundle(ROOT / "data" / "okf")}
+    assert concepts["policies/rent"].trust == "human-reviewed"
+    assert concepts["external/contractor-note"].trust == "unverified"
+    assert concepts["policies/rent-rev0"].status == "deprecated"
+
+
+def test_provenance_stays_out_of_the_text_the_gate_judges(desk):
+    note = next(h for h in desk.kb.search("corridor cleaning schedule", k=10) if h["doc_id"] == "contractor-note")
+    assert "unverified" in note["provenance"] and "unverified" not in note["text"]

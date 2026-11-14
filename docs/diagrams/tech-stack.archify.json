@@ -40,6 +40,12 @@
    "sublabel": "CUDA or CPU"
   },
   {
+   "id": "a4",
+   "label": "torchvision",
+   "parent": "dm",
+   "sublabel": "photo input"
+  },
+  {
    "id": "rt",
    "label": "Retrieval",
    "parent": "root"
@@ -63,6 +69,12 @@
    "sublabel": "structured answers"
   },
   {
+   "id": "b4",
+   "label": "Open Knowledge Format",
+   "parent": "rt",
+   "sublabel": "policy bundle, v0.2"
+  },
+  {
    "id": "dl",
    "label": "Delivery",
    "parent": "root"
@@ -71,7 +83,7 @@
    "id": "c1",
    "label": "pytest",
    "parent": "dl",
-   "sublabel": "8 offline tests"
+   "sublabel": "13 offline tests"
   },
   {
    "id": "c2",

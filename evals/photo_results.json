@@ -1,0 +1,146 @@
+{
+  "results": [
+    {
+      "config": "Laya reader, zero-shot",
+      "urgency_acc": 0.2,
+      "issue_acc": 0.467,
+      "emergency_recall": 1.0,
+      "false_emergencies": 10,
+      "median_ms": 760
+    },
+    {
+      "config": "Claude",
+      "urgency_acc": 0.733,
+      "issue_acc": 0.867,
+      "emergency_recall": 0.667,
+      "false_emergencies": 3,
+      "median_ms": 2026,
+      "cost_usd_incl_warmup": 0.145
+    },
+    {
+      "config": "cascade below 0.5",
+      "urgency_acc": 0.733,
+      "issue_acc": 0.867,
+      "emergency_recall": 0.667,
+      "false_emergencies": 3,
+      "median_ms": 1957,
+      "sent_to_claude": 11
+    },
+    {
+      "config": "cascade below 0.6",
+      "urgency_acc": 0.733,
+      "issue_acc": 0.867,
+      "emergency_recall": 0.667,
+      "false_emergencies": 3,
+      "median_ms": 2016,
+      "sent_to_claude": 14
+    }
+  ],
+  "per_photo": [
+    {
+      "file": "ceiling-collapse-1.jpg",
+      "gold": "emergency",
+      "laya": "emergency",
+      "laya_conf": 0.53,
+      "claude": "emergency"
+    },
+    {
+      "file": "ceiling-collapse-2.jpg",
+      "gold": "emergency",
+      "laya": "emergency",
+      "laya_conf": 0.59,
+      "claude": "emergency"
+    },
+    {
+      "file": "toilet-overflow.jpg",
+      "gold": "emergency",
+      "laya": "emergency",
+      "laya_conf": 0.41,
+      "claude": "soon"
+    },
+    {
+      "file": "ceiling-stain-mould.jpg",
+      "gold": "soon",
+      "laya": "emergency",
+      "laya_conf": 0.5,
+      "claude": "soon"
+    },
+    {
+      "file": "ceiling-water-stain-1.jpg",
+      "gold": "soon",
+      "laya": "emergency",
+      "laya_conf": 0.4,
+      "claude": "soon"
+    },
+    {
+      "file": "ceiling-water-stain-2.jpg",
+      "gold": "soon",
+      "laya": "emergency",
+      "laya_conf": 0.42,
+      "claude": "soon"
+    },
+    {
+      "file": "ceiling-peeling-water.jpg",
+      "gold": "soon",
+      "laya": "emergency",
+      "laya_conf": 0.39,
+      "claude": "soon"
+    },
+    {
+      "file": "black-mould-wall.jpg",
+      "gold": "soon",
+      "laya": "emergency",
+      "laya_conf": 0.43,
+      "claude": "soon"
+    },
+    {
+      "file": "broken-window-glass.jpg",
+      "gold": "soon",
+      "laya": "emergency",
+      "laya_conf": 0.56,
+      "claude": "emergency"
+    },
+    {
+      "file": "shattered-light-fixture.jpg",
+      "gold": "soon",
+      "laya": "emergency",
+      "laya_conf": 0.66,
+      "claude": "emergency"
+    },
+    {
+      "file": "damaged-wall-hole.jpg",
+      "gold": "soon",
+      "laya": "emergency",
+      "laya_conf": 0.41,
+      "claude": "emergency"
+    },
+    {
+      "file": "bathtub-tile-crack.jpg",
+      "gold": "routine",
+      "laya": "soon",
+      "laya_conf": 0.38,
+      "claude": "routine"
+    },
+    {
+      "file": "living-room-1.jpg",
+      "gold": "routine",
+      "laya": "emergency",
+      "laya_conf": 0.3,
+      "claude": "routine"
+    },
+    {
+      "file": "kitchen-cafe.jpg",
+      "gold": "routine",
+      "laya": "emergency",
+      "laya_conf": 0.32,
+      "claude": "routine"
+    },
+    {
+      "file": "living-room-2.jpg",
+      "gold": "routine",
+      "laya": "soon",
+      "laya_conf": 0.28,
+      "claude": "routine"
+    }
+  ]
+}
